@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-11-30 20:20:17
+/* Smarty version 3.1.33, created on 2019-11-30 21:13:24
   from '/opt/lampp/htdocs/copiaAPI/templates/login.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5de2c0f19048a6_73410397',
+  'unifunc' => 'content_5de2cd645e9430_30919254',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '58e0bad3982fb1c34524ca4af451f1864fbc600c' => 
     array (
       0 => '/opt/lampp/htdocs/copiaAPI/templates/login.tpl',
-      1 => 1575141613,
+      1 => 1575144613,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5de2c0f19048a6_73410397 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5de2cd645e9430_30919254 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -33,7 +33,8 @@ function content_5de2c0f19048a6_73410397 (Smarty_Internal_Template $_smarty_tpl)
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-    <title>INICIO</title>
+    <title><?php echo $_smarty_tpl->tpl_vars['titulo']->value;?>
+</title>
 </head>
 
 <body>
@@ -44,7 +45,8 @@ function content_5de2c0f19048a6_73410397 (Smarty_Internal_Template $_smarty_tpl)
         <nav class="navbar navbar-expand-lg navbar-light bg-transparent"></nav>
 
         <div class="container-fluid">
-                <div class="col-5 mx-auto bg-secondary">
+            <div class="row">
+                <div class="col-4 mx-auto bg-secondary">
                     <form class="text-left" action="verifyUser" method="POST" class="col-md-4 offset-md-4 mt-4">
                         <h1 class="text-left font-weight-bold"><?php echo $_smarty_tpl->tpl_vars['titulo']->value;?>
 </h1>
@@ -69,6 +71,12 @@ function content_5de2c0f19048a6_73410397 (Smarty_Internal_Template $_smarty_tpl)
                         <button type="submit" class="btn btn-primary font-weight-bold">Ingresar</button>
                     </form>
                 </div>
+                <div class="col-6">
+                    <?php if (!isset($_smarty_tpl->tpl_vars['isAdmin']->value)) {?>
+                        <a href='registro'><button type="button" class="btn btn-success btn-lg">REGISTRARSE !!!!</button></a>
+                    <?php }?>
+                </div>
+            </div>
         </div>
 
         <div class="container"> 

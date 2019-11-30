@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-11-30 20:27:55
+/* Smarty version 3.1.33, created on 2019-11-30 21:13:19
   from '/opt/lampp/htdocs/copiaAPI/templates/registro.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5de2c2bb2591b4_91729828',
+  'unifunc' => 'content_5de2cd5f282076_70838022',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '61ace47733609dd606cda22bc7e7bf79908484fc' => 
     array (
       0 => '/opt/lampp/htdocs/copiaAPI/templates/registro.tpl',
-      1 => 1575141661,
+      1 => 1575144795,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5de2c2bb2591b4_91729828 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5de2cd5f282076_70838022 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -45,6 +45,7 @@ function content_5de2c2bb2591b4_91729828 (Smarty_Internal_Template $_smarty_tpl)
         <nav class="navbar navbar-expand-lg navbar-light bg-transparent"></nav>
 
         <div class="container-fluid">
+            <div class="row">
                 <div class="col-4 mx-auto bg-success">
                     <form class="text-left" action="registrarUser" method="POST" class="col-md-4 offset-md-4 mt-4">
                         <h1 class="font-weight-bold"><?php echo $_smarty_tpl->tpl_vars['titulo']->value;?>
@@ -70,11 +71,16 @@ function content_5de2c2bb2591b4_91729828 (Smarty_Internal_Template $_smarty_tpl)
                         <button type="submit" class="btn btn-primary font-weight-bold">Registrarme</button>
                     </form>
                 </div>
+                <div class="col-6">
+                    <a href='login'><button type="button" class="btn btn-danger btn-lg">YA SOY USUARIO REGISTRADO !!!!</button></a>  
+                </div>
+            </div>
         </div>
 
-        <div class="container">
-                <h1></h1>
+        <div class="container"> 
+            <div class="row"> </div>
         </div>
+
 
         <div class="container">
             <h1 class="text-uppercase font-weight-bold">lista de equipos</h1>

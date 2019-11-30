@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-    <title>INICIO</title>
+    <title>{$titulo}</title>
 </head>
 
 <body>
@@ -20,7 +20,8 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-transparent"></nav>
 
         <div class="container-fluid">
-                <div class="col-5 mx-auto bg-secondary">
+            <div class="row">
+                <div class="col-4 mx-auto bg-secondary">
                     <form class="text-left" action="verifyUser" method="POST" class="col-md-4 offset-md-4 mt-4">
                         <h1 class="text-left font-weight-bold">{$titulo}</h1>
 
@@ -43,6 +44,12 @@
                         <button type="submit" class="btn btn-primary font-weight-bold">Ingresar</button>
                     </form>
                 </div>
+                <div class="col-6">
+                    {if !isset($isAdmin)}
+                        <a href='registro'><button type="button" class="btn btn-success btn-lg">REGISTRARME !!!!</button></a>
+                    {/if}
+                </div>
+            </div>
         </div>
 
         <div class="container"> 

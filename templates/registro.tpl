@@ -20,6 +20,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-transparent"></nav>
 
         <div class="container-fluid">
+            <div class="row">
                 <div class="col-4 mx-auto bg-success">
                     <form class="text-left" action="registrarUser" method="POST" class="col-md-4 offset-md-4 mt-4">
                         <h1 class="font-weight-bold">{$titulo}</h1>
@@ -43,11 +44,16 @@
                         <button type="submit" class="btn btn-primary font-weight-bold">Registrarme</button>
                     </form>
                 </div>
+                <div class="col-6">
+                    <a href='login'><button type="button" class="btn btn-danger btn-lg">YA SOY USUARIO REGISTRADO !!!!</button></a>  
+                </div>
+            </div>
         </div>
 
-        <div class="container">
-                <h1></h1>
+        <div class="container"> 
+            <div class="row"> </div>
         </div>
+
 
         <div class="container">
             <h1 class="text-uppercase font-weight-bold">lista de equipos</h1>

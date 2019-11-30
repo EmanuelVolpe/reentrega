@@ -1,5 +1,5 @@
         
-        {if !isset($username)}
+        {if !isset($isAdmin)}
             <a href='registro'><button type="button" class="btn btn-success fixed-bottom btn-lg">REGISTRARSE !!!!</button></a>
         {/if}
 
