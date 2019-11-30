@@ -9,8 +9,7 @@ class ComentarioModel {
     }
 
     public function get($idComentario){
-
-        $query = $this->db->prepare('SELECT * FROM comentario WHERE id_jugador =?');
+        $query = $this->db->prepare('SELECT * FROM comentario WHERE id_comentario = ?');
         $query->execute(array($idComentario));
         return $query->fetch(PDO::FETCH_OBJ);
     }
@@ -18,10 +17,10 @@ class ComentarioModel {
     /**
      * Obtiene la lista de comentarios ordenando alfabeticamente por puntaje.
      */
-    public function getAll() {
+    public function getAll($idJugador) {
 
-        $query = $this->db->prepare('SELECT * FROM comentario ORDER BY puntaje');
-        $query->execute();
+        $query = $this->db->prepare('SELECT * FROM comentario WHERE id_jugador = ? ORDER BY puntaje');
+        $query->execute(array($idJugador));
         return $query->fetchAll(PDO::FETCH_OBJ);
     }
 

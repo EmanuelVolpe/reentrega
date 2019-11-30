@@ -1,5 +1,5 @@
 <?php
-require_once("/comentario.model.php");
+require_once("models/comentario.model.php");
 require_once("api/json.view.php");
 
 class ComentarioApiController {
@@ -19,20 +19,19 @@ class ComentarioApiController {
     }
 
     public function  getComentarios($params = null) {
-        $comentarios = $this->model->getAll();
-        //var_dump($comentarios);
-        $this->view->response($comentarios, 200);
+        //por POST
+        //$id = $params[':ID'];
+
+        $id = $_GET['idJugador'];
+        //if ($id){ 
+        $comentarios = $this->model->getAll($id);
+            if ($comentarios)
+                $this->view->response($comentarios, 200); 
+            else
+                $this->view->response("El jugador con id={$id} no tiene comentarios", 404);
+  
     }
 
-    public function getComentario($params = null) {
-        $id = $params[':ID'];
-        
-        $comentario = $this->model->get($id);        
-        if ($comentario)
-            $this->view->response($comentario, 200);
-        else
-            $this->view->response("El comentario con el id={$id} no existe", 404);
-    } 
 
     public function deleteComentario($params = null) {
         $id = $params[':ID'];
@@ -44,10 +43,11 @@ class ComentarioApiController {
             $this->view->response("El comentario con el id={$id} no existe", 404);
     }
 
-    public function crearComentario($params = null) {
+    public function crearComentario($params = null) {  
         $data = $this->getData();
+
         $id = $this->model->save($data->comentario, $data->puntaje, $data->id_jugador, $data->id_usuario);
-               
+        
         $comentario = $this->model->get($id);
         if ($comentario)
             $this->view->response($comentario, 200);
@@ -55,5 +55,6 @@ class ComentarioApiController {
             $this->view->response("El comentario no fue creado", 500);
 
     }
+    
 
 }

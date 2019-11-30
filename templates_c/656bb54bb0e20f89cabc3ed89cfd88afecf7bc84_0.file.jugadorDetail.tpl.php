@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-11-27 01:32:11
+/* Smarty version 3.1.33, created on 2019-11-29 21:49:39
   from '/opt/lampp/htdocs/copiaAPI/templates/jugadorDetail.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5dddc40b62f4c3_48666128',
+  'unifunc' => 'content_5de184631241a5_13177877',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '656bb54bb0e20f89cabc3ed89cfd88afecf7bc84' => 
     array (
       0 => '/opt/lampp/htdocs/copiaAPI/templates/jugadorDetail.tpl',
-      1 => 1574814728,
+      1 => 1575060366,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5dddc40b62f4c3_48666128 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5de184631241a5_13177877 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:templates/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -44,6 +44,7 @@ $_smarty_tpl->_subTemplateRender('file:templates/header.tpl', $_smarty_tpl->cach
             <img src="<?php echo $_smarty_tpl->tpl_vars['jugador']->value->imagen;?>
 " class="img-fluid rounded border border-success"/>
         <?php }?>
+        
         <form id="formComentario">
             <div class="row">
                 <div class="col-10">

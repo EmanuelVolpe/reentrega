@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <div class="container-fluid bg-info">
+    <div class="container-fluid bg-warning">
         <nav class="navbar navbar-expand-lg navbar-light bg-dark"></nav>
         <nav class="navbar navbar-expand-lg navbar-light bg-danger"></nav>
         <nav class="navbar navbar-expand-lg navbar-light bg-dark"></nav>
@@ -84,6 +84,7 @@
                         <th scope="col">Nombre Del Equipo</th>
                         <th scope="col">Pais</th>
                         <th scope="col">Cantidad de Titulos</th>
+                        <th scope="col">Opciones</th>
                     </tr>
                 </thead>
                 {foreach $equipos as $equipo}
@@ -92,6 +93,7 @@
                         <td>{$equipo->nombre}</td> 
                         <td>{$equipo->pais}</td> 
                         <td>{$equipo->cantidad_titulos}</td> 
+                        <td><a href='verEquipo/{$equipo->id_equipo}'><button type="button" class="btn btn-info">Ver Detalle</button></a></td>
                     </tr>
                 {/foreach}
             </table>
@@ -108,6 +110,7 @@
                         <th scope="col">Nombre Del Jugador</th>
                         <th scope="col">Posicion</th>
                         <th scope="col">Nombre del Equipo</th>
+                        <th scope="col">Opciones</th>
                     </tr>
                 </thead>
                 {foreach $jugadores as $jugador}
@@ -116,6 +119,7 @@
                         <td>{$jugador->nombreJugador}</td> 
                         <td>{$jugador->posicion}</td> 
                         <td>{$jugador->nombreEquipo}</td>
+                        <td><a href='verJugador/{$jugador->id_jugador}'><button type="button" class="btn btn-info">Ver Detalle</button></a></td>
                     </tr>
                 {/foreach}
             </table>

@@ -21,6 +21,5 @@ class JSONView {
           500 => "Internal Server Error"
         );
         return (isset($status[$code]))? $status[$code] : $status[500];
-      }
-  
+      } 
 }

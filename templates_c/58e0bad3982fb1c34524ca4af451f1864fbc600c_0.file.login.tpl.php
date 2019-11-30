@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-11-29 01:21:24
+/* Smarty version 3.1.33, created on 2019-11-29 21:03:24
   from '/opt/lampp/htdocs/copiaAPI/templates/login.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5de06484668b93_79283674',
+  'unifunc' => 'content_5de1798cf01238_09114847',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '58e0bad3982fb1c34524ca4af451f1864fbc600c' => 
     array (
       0 => '/opt/lampp/htdocs/copiaAPI/templates/login.tpl',
-      1 => 1574986879,
+      1 => 1575057801,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5de06484668b93_79283674 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5de1798cf01238_09114847 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -38,7 +38,7 @@ function content_5de06484668b93_79283674 (Smarty_Internal_Template $_smarty_tpl)
 </head>
 
 <body>
-    <div class="container-fluid bg-info">
+    <div class="container-fluid bg-warning">
         <nav class="navbar navbar-expand-lg navbar-light bg-dark"></nav>
         <nav class="navbar navbar-expand-lg navbar-light bg-danger"></nav>
         <nav class="navbar navbar-expand-lg navbar-light bg-dark"></nav>
@@ -112,6 +112,7 @@ function content_5de06484668b93_79283674 (Smarty_Internal_Template $_smarty_tpl)
                         <th scope="col">Nombre Del Equipo</th>
                         <th scope="col">Pais</th>
                         <th scope="col">Cantidad de Titulos</th>
+                        <th scope="col">Opciones</th>
                     </tr>
                 </thead>
                 <?php
@@ -128,6 +129,8 @@ foreach ($_from as $_smarty_tpl->tpl_vars['equipo']->value) {
 </td> 
                         <td><?php echo $_smarty_tpl->tpl_vars['equipo']->value->cantidad_titulos;?>
 </td> 
+                        <td><a href='verEquipo/<?php echo $_smarty_tpl->tpl_vars['equipo']->value->id_equipo;?>
+'><button type="button" class="btn btn-info">Ver Detalle</button></a></td>
                     </tr>
                 <?php
 }
@@ -147,6 +150,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                         <th scope="col">Nombre Del Jugador</th>
                         <th scope="col">Posicion</th>
                         <th scope="col">Nombre del Equipo</th>
+                        <th scope="col">Opciones</th>
                     </tr>
                 </thead>
                 <?php
@@ -163,6 +167,8 @@ foreach ($_from as $_smarty_tpl->tpl_vars['jugador']->value) {
 </td> 
                         <td><?php echo $_smarty_tpl->tpl_vars['jugador']->value->nombreEquipo;?>
 </td>
+                        <td><a href='verJugador/<?php echo $_smarty_tpl->tpl_vars['jugador']->value->id_jugador;?>
+'><button type="button" class="btn btn-info">Ver Detalle</button></a></td>
                     </tr>
                 <?php
 }

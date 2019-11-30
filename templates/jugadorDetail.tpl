@@ -11,6 +11,7 @@
         {if isset($jugador->imagen)}
             <img src="{$jugador->imagen}" class="img-fluid rounded border border-success"/>
         {/if}
+        
         <form id="formComentario">
             <div class="row">
                 <div class="col-10">

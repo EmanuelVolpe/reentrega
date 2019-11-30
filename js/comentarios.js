@@ -4,61 +4,60 @@ document.addEventListener("DOMContentLoaded", function () {
     let app = new Vue({
         el: '#seccionComentario',
         data: {
-            titulo: "Comentario",
             loading: false,
             comentarios: [],
             promedio: 0
-        },
-        methods: {
-            
         }
+
     })
 
-    document.querySelector("#formComentario").addEventListener('submit', crearComentario);
+    document.querySelector("#enviaComentario").addEventListener("click", crearComentario);
 
     function crearComentario(e) {
         e.preventDefault();
 
-        let data = {
-            comentario:  document.querySelector("#comentario").value,
-            puntaje:     document.querySelector("#puntaje").value,
-            id_jugador:  document.querySelector("#id_jugador").value,
-            id_usuario:  document.querySelector("#id_usuario").value
+        let comentarios = {
+            comentario: document.querySelector("#comentario").value,
+            puntaje:    document.querySelector("#puntaje").value,
+            id_jugador: document.querySelector("#id_jugador").value,
+            id_usuario: document.querySelector("#id_usuario").value
         }
 
-
         fetch('api/comentarios', {
-                method: 'POST',
-                headers: {
+                "method": 'POST',
+                "headers": {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(data)
+                "body": JSON.stringify(comentarios)
             })
             .then(response => {
-                alert("se Agrego Exitosamente");
-                getComentarios();
+                if (response.status == 200) {
+                    alert("COMENTARIO ENVIADO");
+                    getComentarios();
+                }
+                else 
+                    alert("error");
             })
-            .catch(error => console.log(error));
     }
 
-
-
     // btn refresh
-    document.querySelector("#btn-refresh").addEventListener('click', getComentarios());
+    //document.querySelector("#btn-refresh").addEventListener('click', getComentarios());
 
     function getComentarios() {
         // inicia la carga
         app.loading = true;
+        let id_jugador = document.querySelector("#id_jugador").value;
 
-        let id_jugador= document.querySelector("#id_jugador").value;
+        //por POST
+        //fetch("api/comentarios/ + id_jugador)
 
-        fetch("api/comentarios?idJugador=r"+ id_jugador)
+        fetch("api/comentarios?idJugador=" + id_jugador)
             .then(response => response.json())
             .then(comentarios => {
                 console.log(comentarios);
                 app.comentarios = comentarios;
                 app.loading = false;
-                app.promedio = promedio(comentarios);
+                //app.promedio = promedio(comentarios);
             })
             .catch(error => console.log(error));
     }
@@ -76,11 +75,6 @@ document.addEventListener("DOMContentLoaded", function () {
         return promedio;
     }
 
-
-
-
-
-
-
+    getComentarios();
 
 })

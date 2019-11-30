@@ -1,17 +1,24 @@
 {literal}
-<section id="seccionComentario">
+    <section id="seccionComentario">
 
         <div class="card">
 
-            <div v-if="loading" class="card-body">
-                Cargando...
-            </div>
+             <table class="table table-striped table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Comentario</th>
+                        <th scope="col">Puntaje</th>
+                        <th scope="col">Opciones</th>
+                    </tr>
+                </thead>
+                <tr v-for="comentario in comentarios">
+                    <td>{{comentario.comentario}}</td> 
+                    <td>{{comentario.puntaje}}</td>
+                    <td><button v-if="esAdmin" type="button" class="btn btn-primary" v-on:click="(event)=>{eliminarComentario(event, comentario.id_comentario)}">Eliminar Comentario</button></td>    
+                </tr>
+            </table>
+        </div> 
 
-            <ul v-if="!loading" class="list-group list-group-flush">
-                <a v-for="comentario in comentarios"  class="list-group-item list-group-item-action"> 
-                    {{ comentario.comentario }} 
-                </a>
-            </ul>
-        </div>     
-</section>
+        <span> El promedio es: {{promedio}}</span>   
+    </section>
 {/literal}
