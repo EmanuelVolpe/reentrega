@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-11-29 21:49:39
+/* Smarty version 3.1.33, created on 2019-11-30 11:10:17
   from '/opt/lampp/htdocs/copiaAPI/templates/jugadorDetail.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5de184631241a5_13177877',
+  'unifunc' => 'content_5de24009cb12d5_63917596',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '656bb54bb0e20f89cabc3ed89cfd88afecf7bc84' => 
     array (
       0 => '/opt/lampp/htdocs/copiaAPI/templates/jugadorDetail.tpl',
-      1 => 1575060366,
+      1 => 1575108613,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5de184631241a5_13177877 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5de24009cb12d5_63917596 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:templates/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -57,11 +57,11 @@ $_smarty_tpl->_subTemplateRender('file:templates/header.tpl', $_smarty_tpl->cach
                     <div class="form-group">
                         <label for="exampleFormControlSelect1">Puntuar Comentario</label>
                         <select class="form-control" id="puntaje">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
+                            <option value="1"> 1 - Malo      </option>
+                            <option value="2"> 2 - Regular   </option>
+                            <option value="3"> 3 - Bueno     </option>
+                            <option value="4"> 4 - Muy Bueno </option>
+                            <option value="5"> 5 - Excelente </option>
                         </select>
                     </div>
                 </div>
@@ -74,6 +74,12 @@ $_smarty_tpl->_subTemplateRender('file:templates/header.tpl', $_smarty_tpl->cach
                 <div class="col">
                     <div class="form-group">
                         ID USUARIO<input id="id_usuario" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['userID']->value;?>
+">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        USUARIO ADMIN<input id="isAdmin" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['isAdmin']->value;?>
 ">
                     </div>
                 </div>

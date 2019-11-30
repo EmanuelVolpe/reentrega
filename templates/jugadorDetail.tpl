@@ -24,11 +24,11 @@
                     <div class="form-group">
                         <label for="exampleFormControlSelect1">Puntuar Comentario</label>
                         <select class="form-control" id="puntaje">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
+                            <option value="1"> 1 - Malo      </option>
+                            <option value="2"> 2 - Regular   </option>
+                            <option value="3"> 3 - Bueno     </option>
+                            <option value="4"> 4 - Muy Bueno </option>
+                            <option value="5"> 5 - Excelente </option>
                         </select>
                     </div>
                 </div>
@@ -40,6 +40,11 @@
                 <div class="col">
                     <div class="form-group">
                         ID USUARIO<input id="id_usuario" class="form-control" value="{$userID}">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        USUARIO ADMIN<input id="isAdmin" class="form-control" value="{$isAdmin}">
                     </div>
                 </div>
                 <button type="submit" class="btn btn-success" id="enviaComentario" >Enviar Comentario</button>

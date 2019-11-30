@@ -8,13 +8,13 @@
                     <tr>
                         <th scope="col">Comentario</th>
                         <th scope="col">Puntaje</th>
-                        <th scope="col">Opciones</th>
+                        <th scope="col">Opcion</th>
                     </tr>
                 </thead>
                 <tr v-for="comentario in comentarios">
                     <td>{{comentario.comentario}}</td> 
                     <td>{{comentario.puntaje}}</td>
-                    <td><button v-if="esAdmin" type="button" class="btn btn-primary" v-on:click="(event)=>{eliminarComentario(event, comentario.id_comentario)}">Eliminar Comentario</button></td>    
+                    <td><button v-if="isAdmin" type="button" class="btn btn-primary" v-on:click="(event)=>{eliminarComentario(event, comentario.id_comentario)}">Eliminar Comentario</button></td>    
                 </tr>
             </table>
         </div> 
