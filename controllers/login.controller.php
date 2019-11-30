@@ -21,8 +21,6 @@ class LoginController {
         $this->model = new UserModel();
         $this->authHelper = new AuthHelper();
         $this->equipoModel= new EquipoModel();
-        //$this->jugadorModel= new JugadorModel();
-
     }
 
     public function showLogin() {
@@ -32,36 +30,26 @@ class LoginController {
     }
 
     public function verificarUsuario() {
+        $jugadores = $this->equipoModel->getJugadoresConDetalle();
+        $equipos = $this->equipoModel->getAllEquipos();
         $username = $_POST['username'];
         $pass = $_POST['password'];
         $user = $this->model->getByUserName($username);
+        //var_dump($user);
+        //die();
 
-        if (!empty($user) && password_verify($pass, $user->pass) && ($user->admin == 1)) {
+        if (!empty($user) && password_verify($pass, $user->pass) && ($user->administ == 1)) {
             $this->authHelper->login($user);
-           header("Location: " . BASE_URL . "verEquipos");
+            header("Location: " . BASE_URL . "verEquipos");
             
         }
-        elseif (!empty($user) && password_verify($pass, $user->pass) && ($user->admin == 0)){
+        elseif (!empty($user) && password_verify($pass, $user->pass) && ($user->administ == 0)){
             $this->authHelper->login($user);  
             header("Location: " . BASE_URL . "verEquipos");
         } 
         else {
-            $this->view->showLoginView("Login incorrecto");
+            $this->view->showLoginView("Login incorrecto",$equipos, $jugadores);
         }
-    }
-
-    public function registrarUsuario() {
-        $usernameRegistro = $_POST['usernameRegistro'];
-        $passwordRegistro = $_POST['passwordRegistro'];
-       
-        $hash = password_hash($passwordRegistro, PASSWORD_DEFAULT);
-        $this->model->agregaUsuario($usernameRegistro, $hash);
-    
-        $user = $this->model->getByUserName($usernameRegistro);
-        $this->authHelper->login($user);
-    
-        header("Location: " . BASE_URL . "verEquipos");
-
     }
     
     public function logout() {
@@ -102,7 +90,6 @@ class LoginController {
         //var_dump($_SESSION);
         //die();
 
-
         if (is_numeric($administrador)) {
             $this->model->editaPrivilegios($administrador, $idUsuario);
             if((($administrador == 1) && ($idUsuario = $_SESSION['ID_USER'])) || (($idUsuario!= $_SESSION['ID_USER'])))
@@ -113,5 +100,4 @@ class LoginController {
             $this->userView->showError("Faltan datos obligatorios");
         }
     }
-
 }

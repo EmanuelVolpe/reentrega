@@ -2,6 +2,8 @@
     require_once('controllers/equipo.controller.php');
     require_once('controllers/jugador.controller.php');
     require_once('controllers/login.controller.php');
+    require_once('controllers/registro.controller.php');
+
     require_once('Router.php');
 
     // CONSTANTES PARA RUTEO
@@ -11,10 +13,13 @@
 
     $r = new Router();
 
+    //RUTAS REGISTRO
+
+    $r->addRoute("registro",      "GET",  "RegistroController", "showRegistro");
+    $r->addRoute("registrarUser", "POST", "RegistroController", "registrarUsuario");
     // RUTAS LOGIN
     $r->addRoute("login",         "GET",  "LoginController", "showLogin");
     $r->addRoute("verifyUser",    "POST", "LoginController", "verificarUsuario");
-    $r->addRoute("registrarUser", "POST", "LoginController", "registrarUsuario");
     $r->addRoute("logout",        "GET",  "LoginController", "logout");
     // RUTAS EQUIPOS 
     $r->addRoute("verEquipos",         "GET",   "EquipoController", "showEquipos");

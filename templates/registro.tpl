@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-    <title>INICIO</title>
+    <title>{$titulo}</title>
 </head>
 
 <body>
@@ -20,18 +20,18 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-transparent"></nav>
 
         <div class="container-fluid">
-                <div class="col-5 mx-auto bg-secondary">
-                    <form class="text-left" action="verifyUser" method="POST" class="col-md-4 offset-md-4 mt-4">
-                        <h1 class="text-left font-weight-bold">{$titulo}</h1>
+                <div class="col-4 mx-auto bg-success">
+                    <form class="text-left" action="registrarUser" method="POST" class="col-md-4 offset-md-4 mt-4">
+                        <h1 class="font-weight-bold">{$titulo}</h1>
 
                         <div class="form-group font-weight-bold">
                             <label>Usuario (email)</label>
-                            <input type="email" name="username" class="form-control" placeholder="Ingrese email">
+                            <input type="email" name="usernameRegistro" class="form-control" placeholder="Ingrese email">
                         </div>
 
                         <div class="form-group font-weight-bold">
                             <label>Password</label>
-                            <input type="password" name="password" class="form-control" placeholder="Password">
+                            <input type="password" name="passwordRegistro" class="form-control" placeholder="Password">
                         </div>
 
                         {if $error}
@@ -40,13 +40,13 @@
                             </div>
                         {/if}
 
-                        <button type="submit" class="btn btn-primary font-weight-bold">Ingresar</button>
+                        <button type="submit" class="btn btn-primary font-weight-bold">Registrarme</button>
                     </form>
                 </div>
         </div>
 
-        <div class="container"> 
-            <div class="row"> </div>
+        <div class="container">
+                <h1></h1>
         </div>
 
         <div class="container">

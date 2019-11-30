@@ -1,7 +1,7 @@
 <?php
     require_once('libs/Smarty.class.php');
 
-    class LoginView {
+    class RegistroView {
 
         private $smarty;
      
@@ -10,13 +10,11 @@
             $this->smarty->assign('baseURL', BASE_URL);
         }
 
-        public function showLoginView($error = null, $equipos, $jugadores){
-            $this->smarty->assign('titulo', 'Iniciar Sesión');
-            //$this->smarty->assign('tituloRegistro', 'Registrarme');
+        public function showRegistroView($error = null, $equipos, $jugadores){
+            $this->smarty->assign('titulo', 'Registrarme');
             $this->smarty->assign('equipos', $equipos);
             $this->smarty->assign('jugadores', $jugadores);
             $this->smarty->assign('error', $error);
-            $this->smarty->display('templates/login.tpl');
+            $this->smarty->display('templates/registro.tpl');
         }
-
     }
