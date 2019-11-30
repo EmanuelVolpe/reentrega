@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-11-25 23:04:42
+/* Smarty version 3.1.33, created on 2019-11-30 13:02:34
   from '/opt/lampp/htdocs/copiaAPI/templates/jugadorList.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5ddc4ffab1a285_86526269',
+  'unifunc' => 'content_5de25a5ac093e5_25621160',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a15de165cbc8751caab34126ffa56076742f67ab' => 
     array (
       0 => '/opt/lampp/htdocs/copiaAPI/templates/jugadorList.tpl',
-      1 => 1574378611,
+      1 => 1575115350,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5ddc4ffab1a285_86526269 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5de25a5ac093e5_25621160 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:templates/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -85,11 +85,11 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         <table class="table table-striped table-bordered">
             <thead class="thead-dark">
                 <tr>
-                    <th scope="col">ID Jugador</th>
-                    <th scope="col">Nombre Del Jugador</th>
-                    <th scope="col">Posicion</th>
-                    <th scope="col">Nombre del Equipo</th>
-                    <th scope="col">Opciones</th>
+                    <th class="text-center" scope="col">ID Jugador</th>
+                    <th class="text-center" scope="col">Nombre Del Jugador</th>
+                    <th class="text-center" scope="col">Posicion</th>
+                    <th class="text-center" scope="col">Nombre del Equipo</th>
+                    <th class="text-center" scope="col">Opciones</th>
                 </tr>
             </thead>
             <?php
@@ -98,15 +98,15 @@ if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['jugador']->value) {
 ?>
                 <tr>
-                    <td><?php echo $_smarty_tpl->tpl_vars['jugador']->value->id_jugador;?>
+                    <td class="text-center"><?php echo $_smarty_tpl->tpl_vars['jugador']->value->id_jugador;?>
 </td> 
-                    <td><?php echo $_smarty_tpl->tpl_vars['jugador']->value->nombreJugador;?>
+                    <td class="text-center"><?php echo $_smarty_tpl->tpl_vars['jugador']->value->nombreJugador;?>
 </td> 
-                    <td><?php echo $_smarty_tpl->tpl_vars['jugador']->value->posicion;?>
+                    <td class="text-center"><?php echo $_smarty_tpl->tpl_vars['jugador']->value->posicion;?>
 </td> 
-                    <td><?php echo $_smarty_tpl->tpl_vars['jugador']->value->nombreEquipo;?>
+                    <td class="text-center"><?php echo $_smarty_tpl->tpl_vars['jugador']->value->nombreEquipo;?>
 </td>
-                    <td><a href='verJugador/<?php echo $_smarty_tpl->tpl_vars['jugador']->value->id_jugador;?>
+                    <td class="text-center"><a href='verJugador/<?php echo $_smarty_tpl->tpl_vars['jugador']->value->id_jugador;?>
 '><button type="button" class="btn btn-info">Ver Detalle</button></a>
                         <?php if (isset($_smarty_tpl->tpl_vars['isAdmin']->value) && $_smarty_tpl->tpl_vars['isAdmin']->value == 1) {?>
                             <a href='editarJugador/<?php echo $_smarty_tpl->tpl_vars['jugador']->value->id_jugador;?>

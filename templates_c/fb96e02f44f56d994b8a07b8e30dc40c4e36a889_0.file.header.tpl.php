@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-11-26 20:27:07
+/* Smarty version 3.1.33, created on 2019-11-30 12:16:51
   from '/opt/lampp/htdocs/copiaAPI/templates/header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5ddd7c8b71b4f8_07645673',
+  'unifunc' => 'content_5de24fa3bbcc88_92790739',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fb96e02f44f56d994b8a07b8e30dc40c4e36a889' => 
     array (
       0 => '/opt/lampp/htdocs/copiaAPI/templates/header.tpl',
-      1 => 1574792667,
+      1 => 1575112609,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ddd7c8b71b4f8_07645673 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5de24fa3bbcc88_92790739 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -30,16 +30,13 @@ function content_5ddd7c8b71b4f8_07645673 (Smarty_Internal_Template $_smarty_tpl)
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- development version, includes helpful console warnings -->
     <?php echo '<script'; ?>
  src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"><?php echo '</script'; ?>
 >
     <?php echo '<script'; ?>
  src="js/comentarios.js"><?php echo '</script'; ?>
 >
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <title><?php echo $_smarty_tpl->tpl_vars['titulo']->value;?>
 </title>
 </head>

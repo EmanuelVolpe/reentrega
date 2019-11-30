@@ -36,20 +36,20 @@
         <table class="table table-striped table-bordered">
             <thead class="thead-dark">
                 <tr>
-                    <th scope="col">ID Equipo</th>
-                    <th scope="col">Nombre Del Equipo</th>
-                    <th scope="col">Pais</th>
-                    <th scope="col">Cantidad de Titulos</th>
-                    <th scope="col">Opciones</th>
+                    <th class="text-center" scope="col">ID Equipo</th>
+                    <th class="text-center" scope="col">Nombre Del Equipo</th>
+                    <th class="text-center" scope="col">Pais</th>
+                    <th class="text-center" scope="col">Cantidad de Titulos</th>
+                    <th class="text-center" scope="col">Opciones</th>
                 </tr>
             </thead>
             {foreach $equipos as $equipo}
                 <tr>
-                    <td>{$equipo->id_equipo}</td> 
-                    <td>{$equipo->nombre}</td> 
-                    <td>{$equipo->pais}</td> 
-                    <td>{$equipo->cantidad_titulos}</td> 
-                    <td><a href='verEquipo/{$equipo->id_equipo}'><button type="button" class="btn btn-info">Ver Detalle</button></a>
+                    <td class="text-center">{$equipo->id_equipo}</td> 
+                    <td class="text-center">{$equipo->nombre}</td> 
+                    <td class="text-center">{$equipo->pais}</td> 
+                    <td class="text-center">{$equipo->cantidad_titulos}</td> 
+                    <td class="text-center"><a href='verEquipo/{$equipo->id_equipo}'><button type="button" class="btn btn-info">Ver Detalle</button></a>
                         {if isset($isAdmin) && $isAdmin==1}
                             <a href='editarEquipo/{$equipo->id_equipo}'><button type="button" class="btn btn-success">Editar</button></a>     
                             <a href='eliminarEquipo/{$equipo->id_equipo}'><button type="button" class="btn btn-danger">Borrar</button></a>

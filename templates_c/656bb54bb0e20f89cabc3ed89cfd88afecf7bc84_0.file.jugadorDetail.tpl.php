@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-11-30 11:10:17
+/* Smarty version 3.1.33, created on 2019-11-30 12:30:52
   from '/opt/lampp/htdocs/copiaAPI/templates/jugadorDetail.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5de24009cb12d5_63917596',
+  'unifunc' => 'content_5de252ec63fb28_56213585',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '656bb54bb0e20f89cabc3ed89cfd88afecf7bc84' => 
     array (
       0 => '/opt/lampp/htdocs/copiaAPI/templates/jugadorDetail.tpl',
-      1 => 1575108613,
+      1 => 1575113449,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5de24009cb12d5_63917596 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5de252ec63fb28_56213585 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:templates/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -47,15 +47,15 @@ $_smarty_tpl->_subTemplateRender('file:templates/header.tpl', $_smarty_tpl->cach
         
         <form id="formComentario">
             <div class="row">
-                <div class="col-10">
+                <div class="col-9">
                     <div class="form-group">
-                        <label for="exampleFormControlTextarea1">Ingrese Comentario</label>
+                        <label class=" lead font-weight-bold" for="exampleFormControlTextarea1">Ingrese Comentario</label>
                         <textarea class="form-control" id="comentario" rows="3"></textarea>
                     </div>
                 </div>
-                <div class="col-2">
+                <div class="col-3">
                     <div class="form-group">
-                        <label for="exampleFormControlSelect1">Puntuar Comentario</label>
+                        <label class=" lead font-weight-bold" for="exampleFormControlSelect1">Puntuar Comentario</label>
                         <select class="form-control" id="puntaje">
                             <option value="1"> 1 - Malo      </option>
                             <option value="2"> 2 - Regular   </option>

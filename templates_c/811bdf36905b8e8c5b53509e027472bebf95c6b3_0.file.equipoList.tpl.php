@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-11-28 21:59:41
+/* Smarty version 3.1.33, created on 2019-11-30 13:01:12
   from '/opt/lampp/htdocs/copiaAPI/templates/equipoList.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5de0353dd307c5_04865668',
+  'unifunc' => 'content_5de25a08c3a751_33648881',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '811bdf36905b8e8c5b53509e027472bebf95c6b3' => 
     array (
       0 => '/opt/lampp/htdocs/copiaAPI/templates/equipoList.tpl',
-      1 => 1574974779,
+      1 => 1575115270,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5de0353dd307c5_04865668 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5de25a08c3a751_33648881 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:templates/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
     <div class="container">
@@ -63,11 +63,11 @@ $_smarty_tpl->_subTemplateRender('file:templates/header.tpl', $_smarty_tpl->cach
         <table class="table table-striped table-bordered">
             <thead class="thead-dark">
                 <tr>
-                    <th scope="col">ID Equipo</th>
-                    <th scope="col">Nombre Del Equipo</th>
-                    <th scope="col">Pais</th>
-                    <th scope="col">Cantidad de Titulos</th>
-                    <th scope="col">Opciones</th>
+                    <th class="text-center" scope="col">ID Equipo</th>
+                    <th class="text-center" scope="col">Nombre Del Equipo</th>
+                    <th class="text-center" scope="col">Pais</th>
+                    <th class="text-center" scope="col">Cantidad de Titulos</th>
+                    <th class="text-center" scope="col">Opciones</th>
                 </tr>
             </thead>
             <?php
@@ -76,15 +76,15 @@ if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['equipo']->value) {
 ?>
                 <tr>
-                    <td><?php echo $_smarty_tpl->tpl_vars['equipo']->value->id_equipo;?>
+                    <td class="text-center"><?php echo $_smarty_tpl->tpl_vars['equipo']->value->id_equipo;?>
 </td> 
-                    <td><?php echo $_smarty_tpl->tpl_vars['equipo']->value->nombre;?>
+                    <td class="text-center"><?php echo $_smarty_tpl->tpl_vars['equipo']->value->nombre;?>
 </td> 
-                    <td><?php echo $_smarty_tpl->tpl_vars['equipo']->value->pais;?>
+                    <td class="text-center"><?php echo $_smarty_tpl->tpl_vars['equipo']->value->pais;?>
 </td> 
-                    <td><?php echo $_smarty_tpl->tpl_vars['equipo']->value->cantidad_titulos;?>
+                    <td class="text-center"><?php echo $_smarty_tpl->tpl_vars['equipo']->value->cantidad_titulos;?>
 </td> 
-                    <td><a href='verEquipo/<?php echo $_smarty_tpl->tpl_vars['equipo']->value->id_equipo;?>
+                    <td class="text-center"><a href='verEquipo/<?php echo $_smarty_tpl->tpl_vars['equipo']->value->id_equipo;?>
 '><button type="button" class="btn btn-info">Ver Detalle</button></a>
                         <?php if (isset($_smarty_tpl->tpl_vars['isAdmin']->value) && $_smarty_tpl->tpl_vars['isAdmin']->value == 1) {?>
                             <a href='editarEquipo/<?php echo $_smarty_tpl->tpl_vars['equipo']->value->id_equipo;?>

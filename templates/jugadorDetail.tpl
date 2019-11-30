@@ -14,15 +14,15 @@
         
         <form id="formComentario">
             <div class="row">
-                <div class="col-10">
+                <div class="col-9">
                     <div class="form-group">
-                        <label for="exampleFormControlTextarea1">Ingrese Comentario</label>
+                        <label class=" lead font-weight-bold" for="exampleFormControlTextarea1">Ingrese Comentario</label>
                         <textarea class="form-control" id="comentario" rows="3"></textarea>
                     </div>
                 </div>
-                <div class="col-2">
+                <div class="col-3">
                     <div class="form-group">
-                        <label for="exampleFormControlSelect1">Puntuar Comentario</label>
+                        <label class=" lead font-weight-bold" for="exampleFormControlSelect1">Puntuar Comentario</label>
                         <select class="form-control" id="puntaje">
                             <option value="1"> 1 - Malo      </option>
                             <option value="2"> 2 - Regular   </option>

@@ -49,20 +49,20 @@
         <table class="table table-striped table-bordered">
             <thead class="thead-dark">
                 <tr>
-                    <th scope="col">ID Jugador</th>
-                    <th scope="col">Nombre Del Jugador</th>
-                    <th scope="col">Posicion</th>
-                    <th scope="col">Nombre del Equipo</th>
-                    <th scope="col">Opciones</th>
+                    <th class="text-center" scope="col">ID Jugador</th>
+                    <th class="text-center" scope="col">Nombre Del Jugador</th>
+                    <th class="text-center" scope="col">Posicion</th>
+                    <th class="text-center" scope="col">Nombre del Equipo</th>
+                    <th class="text-center" scope="col">Opciones</th>
                 </tr>
             </thead>
             {foreach $jugadores as $jugador}
                 <tr>
-                    <td>{$jugador->id_jugador}</td> 
-                    <td>{$jugador->nombreJugador}</td> 
-                    <td>{$jugador->posicion}</td> 
-                    <td>{$jugador->nombreEquipo}</td>
-                    <td><a href='verJugador/{$jugador->id_jugador}'><button type="button" class="btn btn-info">Ver Detalle</button></a>
+                    <td class="text-center">{$jugador->id_jugador}</td> 
+                    <td class="text-center">{$jugador->nombreJugador}</td> 
+                    <td class="text-center">{$jugador->posicion}</td> 
+                    <td class="text-center">{$jugador->nombreEquipo}</td>
+                    <td class="text-center"><a href='verJugador/{$jugador->id_jugador}'><button type="button" class="btn btn-info">Ver Detalle</button></a>
                         {if isset($isAdmin) && $isAdmin==1}
                             <a href='editarJugador/{$jugador->id_jugador}'><button type="button" class="btn btn-success">Editar</button>     
                             <a href='eliminarJugador/{$jugador->id_jugador}'><button type="button" class="btn btn-danger">Borrar</button></a>

@@ -11,13 +11,13 @@
                 <table class="table table-striped table-bordered">
                     <thead class="thead-dark">
                         <tr>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Posicion</th>
+                            <th class="text-center" scope="col">Nombre de los Jugadores</th>
+                            <th class="text-center" scope="col">Posicion</th>
                         </tr>
                     </thead>
                     {foreach $jugadoresDelEquipo as $equipo}
                         <tr>
-                            <td>{$equipo->jugador}</td> <td>{$equipo->posicion}</td>
+                            <td>{$equipo->jugador}</td> <td class="text-center">{$equipo->posicion}</td>
                         </tr>
                     {/foreach}
                 </table>
