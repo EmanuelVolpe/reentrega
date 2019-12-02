@@ -10,7 +10,7 @@
     $router = new Router();
 
     //por GET
-    $router->addRoute('comentarios',     'GET',     'ComentarioApiController', 'getComentarios');
+    $router->addRoute('comentarios',     'GET',     'ComentarioApiController', 'verComentariosJugador');
     //por POST
     //$router->addRoute('comentarios/:ID','POST', 'ComentarioApiController', 'getComentarios');
     //si no anda, cambiar el POST por GET

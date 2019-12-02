@@ -43,15 +43,15 @@ class ComentarioModel {
         $query->execute([$idComentario]);
     }
 
-    public function getComentariosJugadorASC($id_jugador){
+    public function getComentariosJugadorASC($idJugador){
         $query=$this->db->prepare('SELECT comentario.id_comentario, comentario.comentario, comentario.puntaje , comentario.id_jugador_fk, comentario.id_usuario_fk, usuario.username FROM comentario JOIN usuario ON id_usuario=id_usuario_fk WHERE id_jugador_fk=? ORDER BY puntaje ASC');
-        $query->execute([$id_jugador]);
+        $query->execute([$idJugador]);
         return $query->fetchAll(PDO::FETCH_OBJ);
     }
 
-    public function getComentariosJugadorDESC($id_jugador){
+    public function getComentariosJugadorDESC($idJugador){
         $query=$this->db->prepare('SELECT comentario.id_comentario, comentario.comentario, comentario.puntaje , comentario.id_jugador_fk, comentario.id_usuario_fk, usuario.username FROM comentario JOIN usuario ON id_usuario=id_usuario_fk WHERE id_jugador_fk=? ORDER BY puntaje DESC');
-        $query->execute([$id_jugador]);
+        $query->execute([$idJugador]);
         return $query->fetchAll(PDO::FETCH_OBJ);
     }
 }

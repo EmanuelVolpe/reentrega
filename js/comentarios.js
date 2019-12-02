@@ -11,7 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         methods:{
             eliminarComentario: function(event,id_comentario){
-                fetch('api/comentarios/' + id_comentario,{
+                fetch('api/comentarios/' + id_comentario,
+                {
                     "method":"DELETE",
                 })
                 .then(response=>response.json())
@@ -59,11 +60,13 @@ document.addEventListener("DOMContentLoaded", function () {
         app.loading = true;
         let id_jugador = document.querySelector("#id_jugador").value;
         let isAdmin = document.querySelector("#isAdmin").value;
+        let orden = document.querySelector("#orden").value;
+        console.log(orden, id_jugador, isAdmin);
 
         //por POST
         //fetch("api/comentarios/ + id_jugador)
 
-        fetch("api/comentarios?idJugador=" + id_jugador)
+        fetch("api/comentarios?idJugador=" + id_jugador +"&order="+orden)
             .then(response => response.json())
             .then(comentarios => {
                 console.log(comentarios);
@@ -88,6 +91,9 @@ document.addEventListener("DOMContentLoaded", function () {
         return promedio;
     }
 
+    let ordenar = document.querySelector("#btn-ordenar");
+    ordenar.addEventListener("click", getComentarios)
+    
     getComentarios();
 
 })

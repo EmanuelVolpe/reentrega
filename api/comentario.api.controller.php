@@ -18,7 +18,7 @@ class ComentarioApiController {
         return json_decode($this->data);
     }
 
-    public function  getComentarios($params = null) {
+    public function getComentarios($params = null) {
         //por POST
         //$id = $params[':ID'];
 
@@ -54,6 +54,22 @@ class ComentarioApiController {
         else
             $this->view->response("El comentario no fue creado", 500);
 
+    }
+
+    public function verComentariosJugador($params=null){
+        $idJugador = $_GET["idJugador"];
+        $orden = $_GET["order"];
+        
+        if($_GET["order"]=="asc"){
+            $comentarios = $this->model->getComentariosJugadorASC($idJugador);
+            $this->view->response($comentarios, 200);
+        }
+        else if($_GET["order"]=="desc"){
+            $comentarios = $this->model->getComentariosJugadorDESC($idJugador);
+            $this->view->response($comentarios, 200);
+        }
+        //$comentarios = array("comentarios"=> $comentarios);
+        //$this->view->response($comentarios, 200);
     }
     
 
