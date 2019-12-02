@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-11-27 19:14:11
+/* Smarty version 3.1.33, created on 2019-12-02 23:27:03
   from '/opt/lampp/htdocs/copiaAPI/templates/equipoEdit.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5ddebcf38c6667_77754136',
+  'unifunc' => 'content_5de58fb7b18589_62474925',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ba50a8ab5f9eca4945c4cc5e41187363f9102bca' => 
     array (
       0 => '/opt/lampp/htdocs/copiaAPI/templates/equipoEdit.tpl',
-      1 => 1571248046,
+      1 => 1575325619,
       2 => 'file',
     ),
   ),
@@ -22,14 +22,14 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5ddebcf38c6667_77754136 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5de58fb7b18589_62474925 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:templates/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
     <div class="container">
-        <h1><?php echo $_smarty_tpl->tpl_vars['titulo']->value;?>
+        <h1 class="text-white font-weight-bold"><?php echo $_smarty_tpl->tpl_vars['titulo']->value;?>
 </h1>
 
-        <form action="actualizarEquipo" method="POST">
+        <form class="text-white font-weight-bold" action="actualizarEquipo" method="POST">
             <div class="row">
                 <div class="col">
                     <div class="form-group">

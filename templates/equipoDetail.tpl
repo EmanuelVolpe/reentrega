@@ -2,13 +2,13 @@
 
 <div class="container">
 
-        <h1>{$titulo|upper}</h1>
+        <h1 class="text-white font-weight-bold">{$titulo|upper}</h1>
 
-        <h1>Nombre del Equipo: {$equipo->nombre}</h1>
-        <h1>Pais: {$equipo->pais}</h1>
-        <h1>Cantidad de Titulos: {$equipo->cantidad_titulos}</h1>
-        <h1>Jugadores:</h1>
-                <table class="table table-striped table-bordered">
+        <h1 class="text-white font-weight-bold">Nombre del Equipo: {$equipo->nombre}</h1>
+        <h1 class="text-white font-weight-bold">Pais: {$equipo->pais}</h1>
+        <h1 class="text-white font-weight-bold">Cantidad de Titulos: {$equipo->cantidad_titulos}</h1>
+        <h1 class="text-white font-weight-bold">Jugadores:</h1>
+                <table class="table table-striped table-bordered text-white font-weight-bold">
                     <thead class="thead-dark">
                         <tr>
                             <th class="text-center" scope="col">Nombre de los Jugadores</th>
@@ -16,7 +16,7 @@
                         </tr>
                     </thead>
                     {foreach $jugadoresDelEquipo as $equipo}
-                        <tr>
+                        <tr class="bg-secondary">
                             <td>{$equipo->jugador}</td> <td class="text-center">{$equipo->posicion}</td>
                         </tr>
                     {/foreach}

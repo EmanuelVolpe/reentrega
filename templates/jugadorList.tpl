@@ -2,10 +2,10 @@
 
 <div class="container">
 
-    <h1>{$titulo}</h1>
+    <h1 class="text-white font-weight-bold">{$titulo}</h1>
 
     {if isset($isAdmin) && $isAdmin==1}
-    <form action="nuevoJugador" method="POST" enctype="multipart/form-data">
+    <form class="text-white font-weight-bold" action="nuevoJugador" method="POST" enctype="multipart/form-data">
         <div class="row">
             <div class="col">
                 <div class="form-group">
@@ -35,18 +35,20 @@
                 </div>
             </div>
         </div>
-        <div class="form-group">
-            <input type="file" name="input_name" id="imageToUpload">
+        <div class="row">
+            <div class="col-8 form-group">
+                <input class="btn btn-warning" type="file" name="input_name" id="imageToUpload">
+            </div>
+            <div class="col-4">
+                <button type="submit" class="btn btn-primary">Guardar Jugador</button>
+            </div>
         </div>
-        <button type="submit" class="btn btn-primary">Guardar Jugador</button>
     </form>
     {/if}
 
-    <div class="container">
-        <h1></h1>
-    </div>
+    <br>
 
-    <table class="table table-striped table-bordered">
+    <table class="table table-striped table-bordered text-white font-weight-bold">
         <thead class="thead-dark">
             <tr>
                 <th class="text-center" scope="col">ID Jugador</th>
@@ -56,20 +58,22 @@
                 <th class="text-center" scope="col">Opciones</th>
             </tr>
         </thead>
-        {foreach $jugadores as $jugador}
-        <tr>
-            <td class="text-center">{$jugador->id_jugador}</td>
-            <td class="text-center">{$jugador->nombreJugador}</td>
-            <td class="text-center">{$jugador->posicion}</td>
-            <td class="text-center">{$jugador->nombreEquipo}</td>
-            <td class="text-center"><a href='verJugador/{$jugador->id_jugador}'><button type="button" class="btn btn-info">Ver Detalle</button></a>
-                {if isset($isAdmin) && $isAdmin==1}
-                    <a href='editarJugador/{$jugador->id_jugador}'><button type="button" class="btn btn-success">Editar</button>
-                    <a href='eliminarJugador/{$jugador->id_jugador}'><button type="button" class="btn btn-danger">Borrar</button></a>
-                {/if}
-            </td>
-        </tr>
-        {/foreach}
+        <tbody>
+            {foreach $jugadores as $jugador}
+                <tr class="bg-secondary">
+                    <td class="text-center">{$jugador->id_jugador}</td>
+                    <td class="text-center">{$jugador->nombreJugador}</td>
+                    <td class="text-center">{$jugador->posicion}</td>
+                    <td class="text-center">{$jugador->nombreEquipo}</td>
+                    <td class="text-center"><a href='verJugador/{$jugador->id_jugador}'><button type="button" class="btn btn-info">Ver Detalle</button></a>
+                        {if isset($isAdmin) && $isAdmin==1}
+                            <a href='editarJugador/{$jugador->id_jugador}'><button type="button" class="btn btn-success">Editar</button>
+                            <a href='eliminarJugador/{$jugador->id_jugador}'><button type="button" class="btn btn-danger">Borrar</button></a>
+                        {/if}
+                    </td>
+                </tr>
+            {/foreach}
+        </tbody>
     </table>
 </div>
 {include 'templates/footer.tpl'}

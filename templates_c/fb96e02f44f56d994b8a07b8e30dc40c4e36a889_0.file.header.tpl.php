@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-12-02 18:08:25
+/* Smarty version 3.1.33, created on 2019-12-02 23:46:01
   from '/opt/lampp/htdocs/copiaAPI/templates/header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5de54509935177_24188742',
+  'unifunc' => 'content_5de594297b8c03_72588063',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fb96e02f44f56d994b8a07b8e30dc40c4e36a889' => 
     array (
       0 => '/opt/lampp/htdocs/copiaAPI/templates/header.tpl',
-      1 => 1575306501,
+      1 => 1575326759,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5de54509935177_24188742 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5de594297b8c03_72588063 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -37,7 +37,7 @@ function content_5de54509935177_24188742 (Smarty_Internal_Template $_smarty_tpl)
  src="js/comentarios.js"><?php echo '</script'; ?>
 >
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <!--link rel="stylesheet" href="css/style.css"-->
+    <link rel="stylesheet" href="css/style.css">
     <title><?php echo $_smarty_tpl->tpl_vars['titulo']->value;?>
 </title>
 </head>
@@ -45,7 +45,7 @@ function content_5de54509935177_24188742 (Smarty_Internal_Template $_smarty_tpl)
 <body>
 
     <?php if (isset($_smarty_tpl->tpl_vars['isAdmin']->value) && ($_smarty_tpl->tpl_vars['isAdmin']->value == 1) && isset($_smarty_tpl->tpl_vars['userName']->value)) {?>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-danger mb-4 sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-danger mb-4 sticky-top font-weight-bold">
             <a class="navbar-brand" href="verEquipos">TP ESPECIAL 2° PARTE</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -72,7 +72,7 @@ function content_5de54509935177_24188742 (Smarty_Internal_Template $_smarty_tpl)
             </div>
         </nav>
     <?php } elseif (isset($_smarty_tpl->tpl_vars['isAdmin']->value) && ($_smarty_tpl->tpl_vars['isAdmin']->value != 1) && isset($_smarty_tpl->tpl_vars['userName']->value)) {?>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4 sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4 sticky-top font-weight-bold">
             <a class="navbar-brand" href="verEquipos">TP ESPECIAL 2° PARTE</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -95,7 +95,7 @@ function content_5de54509935177_24188742 (Smarty_Internal_Template $_smarty_tpl)
             </div>
         </nav>
     <?php } else { ?>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-success mb-4 sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-success mb-4 sticky-top font-weight-bold">
             <a class="navbar-brand" href="verEquipos">TP ESPECIAL 2° PARTE</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">

@@ -9,14 +9,14 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="js/comentarios.js"></script>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <!--link rel="stylesheet" href="css/style.css"-->
+    <link rel="stylesheet" href="css/style.css">
     <title>{$titulo}</title>
 </head>
 
 <body>
 
     {if isset($isAdmin) && ($isAdmin==1) && isset($userName)}
-        <nav class="navbar navbar-expand-lg navbar-dark bg-danger mb-4 sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-danger mb-4 sticky-top font-weight-bold">
             <a class="navbar-brand" href="verEquipos">TP ESPECIAL 2° PARTE</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,7 +42,7 @@
             </div>
         </nav>
     {elseif isset($isAdmin) && ($isAdmin!=1) && isset($userName)}
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4 sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4 sticky-top font-weight-bold">
             <a class="navbar-brand" href="verEquipos">TP ESPECIAL 2° PARTE</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -64,7 +64,7 @@
             </div>
         </nav>
     {else}
-        <nav class="navbar navbar-expand-lg navbar-dark bg-success mb-4 sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-success mb-4 sticky-top font-weight-bold">
             <a class="navbar-brand" href="verEquipos">TP ESPECIAL 2° PARTE</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">

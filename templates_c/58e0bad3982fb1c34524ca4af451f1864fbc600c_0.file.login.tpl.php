@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-12-02 19:26:25
+/* Smarty version 3.1.33, created on 2019-12-02 23:05:15
   from '/opt/lampp/htdocs/copiaAPI/templates/login.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5de5575189d360_04026727',
+  'unifunc' => 'content_5de58a9b5ae378_83202202',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '58e0bad3982fb1c34524ca4af451f1864fbc600c' => 
     array (
       0 => '/opt/lampp/htdocs/copiaAPI/templates/login.tpl',
-      1 => 1575306785,
+      1 => 1575324310,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5de5575189d360_04026727 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5de58a9b5ae378_83202202 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -38,7 +38,7 @@ function content_5de5575189d360_04026727 (Smarty_Internal_Template $_smarty_tpl)
 </head>
 
 <body>
-    <div class="container-fluid bg-warning">
+    <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-light bg-dark"></nav>
         <nav class="navbar navbar-expand-lg navbar-light bg-danger"></nav>
         <nav class="navbar navbar-expand-lg navbar-light bg-dark"></nav>
@@ -79,14 +79,12 @@ function content_5de5575189d360_04026727 (Smarty_Internal_Template $_smarty_tpl)
             </div>
         </div>
 
-        <div class="container">
-            <div class="row"> </div>
-        </div>
+        <br>
 
         <div class="container">
-            <h1 class="text-uppercase font-weight-bold">lista de equipos</h1>
-            <table class="table table-striped table-bordered">
-                <thead class="thead-dark">
+            <h1 class="text-uppercase text-white font-weight-bold">lista de equipos</h1>
+            <table class="table table-striped table-bordered text-white font-weight-bold text-center">
+                <thead class="thead-dark"> 
                     <tr>
                         <th scope="col">ID Equipo</th>
                         <th scope="col">Nombre Del Equipo</th>
@@ -100,7 +98,7 @@ $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->t
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['equipo']->value) {
 ?>
-                    <tr>
+                    <tr class="bg-secondary">
                         <td><?php echo $_smarty_tpl->tpl_vars['equipo']->value->id_equipo;?>
 </td>
                         <td><?php echo $_smarty_tpl->tpl_vars['equipo']->value->nombre;?>
@@ -118,12 +116,12 @@ foreach ($_from as $_smarty_tpl->tpl_vars['equipo']->value) {
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             </table>
         </div>
+     
+        <br>
+
         <div class="container">
-            <h1></h1>
-        </div>
-        <div class="container">
-            <h1 class="text-uppercase font-weight-bold">lista de jugadores</h1>
-            <table class="table table-striped table-bordered">
+            <h1 class="text-uppercase text-white font-weight-bold">lista de jugadores</h1>
+            <table class="table table-striped table-bordered text-white font-weight-bold text-center">
                 <thead class="thead-dark">
                     <tr>
                         <th scope="col">ID Jugador</th>
@@ -138,7 +136,7 @@ $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->t
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['jugador']->value) {
 ?>
-                    <tr>
+                    <tr class="bg-secondary">
                         <td><?php echo $_smarty_tpl->tpl_vars['jugador']->value->id_jugador;?>
 </td>
                         <td><?php echo $_smarty_tpl->tpl_vars['jugador']->value->nombreJugador;?>

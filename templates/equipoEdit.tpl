@@ -1,8 +1,8 @@
 {include 'templates/header.tpl'}
     <div class="container">
-        <h1>{$titulo}</h1>
+        <h1 class="text-white font-weight-bold">{$titulo}</h1>
 
-        <form action="actualizarEquipo" method="POST">
+        <form class="text-white font-weight-bold" action="actualizarEquipo" method="POST">
             <div class="row">
                 <div class="col">
                     <div class="form-group">

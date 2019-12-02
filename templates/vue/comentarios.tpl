@@ -1,7 +1,7 @@
 {literal}
 <section id="seccionComentario">
 
-    <table class="table table-striped table-bordered">
+    <table class="table table-striped table-bordered text-white font-weight-bold">
         <thead class="thead-dark">
             <tr>
                 <th class="col-3 text-center" scope="col">Comentario</th>
@@ -16,7 +16,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr v-for="comentario in comentarios">
+            <tr v-for="comentario in comentarios" class="bg-secondary">
                 <td class="col-3 text-justify">{{comentario.comentario}}</td>
                 <td class="col-3 text-center">{{comentario.puntaje}}</td>
                 {/literal}
@@ -37,9 +37,9 @@
     {literal}
     <button type="submit" class="btn btn-primary" v-on:click="(event)=>{crearComentario(event)}">Crear
         Comentario</button>
+    <br>
     {/literal}
     {/if}
-    <br>
     
     {literal}
     <div>
@@ -57,7 +57,7 @@
     </div>
     <br>
 
-    <h3 class="font-weight-bold"> El promedio de los puntajes es: {{promedio}}</h3>
+    <h3 class="text-white font-weight-bold"> El promedio de los puntajes es: {{promedio}}</h3>
 </section>
 
 {/literal}

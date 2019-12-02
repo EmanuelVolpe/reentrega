@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-12-02 21:32:48
+/* Smarty version 3.1.33, created on 2019-12-02 23:30:49
   from '/opt/lampp/htdocs/copiaAPI/templates/jugadorDetail.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5de574f08c6673_16571903',
+  'unifunc' => 'content_5de59099aea7e6_25314497',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '656bb54bb0e20f89cabc3ed89cfd88afecf7bc84' => 
     array (
       0 => '/opt/lampp/htdocs/copiaAPI/templates/jugadorDetail.tpl',
-      1 => 1575318746,
+      1 => 1575325846,
       2 => 'file',
     ),
   ),
@@ -23,35 +23,34 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5de574f08c6673_16571903 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5de59099aea7e6_25314497 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:templates/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
 <div class="container">
 
-    <h1><?php echo mb_strtoupper($_smarty_tpl->tpl_vars['titulo']->value, 'UTF-8');?>
+    <h1 class="text-white font-weight-bold"><?php echo mb_strtoupper($_smarty_tpl->tpl_vars['titulo']->value, 'UTF-8');?>
 </h1>
 
     <div class="container-fluid">
-        <h1>Nombre del Jugador: <?php echo $_smarty_tpl->tpl_vars['jugador']->value->jugador;?>
+        <h1 class="text-white font-weight-bold">Nombre del Jugador: <?php echo $_smarty_tpl->tpl_vars['jugador']->value->jugador;?>
 </h1>
-        <h1>Posicion del Jugador: <?php echo $_smarty_tpl->tpl_vars['jugador']->value->posicion;?>
+        <h1 class="text-white font-weight-bold">Posicion del Jugador: <?php echo $_smarty_tpl->tpl_vars['jugador']->value->posicion;?>
 </h1>
-        <h1>Equipo del Jugador: <?php echo $_smarty_tpl->tpl_vars['jugador']->value->nombreEquipo;?>
+        <h1 class="text-white font-weight-bold">Equipo del Jugador: <?php echo $_smarty_tpl->tpl_vars['jugador']->value->nombreEquipo;?>
 </h1>
-        <h1>ID del Jugador: <?php echo $_smarty_tpl->tpl_vars['jugador']->value->id_jugador;?>
+        <h1 class="text-white font-weight-bold">ID del Jugador: <?php echo $_smarty_tpl->tpl_vars['jugador']->value->id_jugador;?>
 </h1>
         <?php if (isset($_smarty_tpl->tpl_vars['jugador']->value->imagen)) {?>
             <img src="<?php echo $_smarty_tpl->tpl_vars['jugador']->value->imagen;?>
 " class="img-fluid rounded border border-success" />
         <?php }?>
     </div>
-    <div class="container-fluid">
-        <h1></h1>
-    </div>
+
+    <br>
 
     <?php if (isset($_smarty_tpl->tpl_vars['isAdmin']->value) && (($_smarty_tpl->tpl_vars['isAdmin']->value == 1) || ($_smarty_tpl->tpl_vars['isAdmin']->value == 0))) {?>
-        <form id="formComentario">
+        <form class="text-white font-weight-bold" id="formComentario">
             <div class="row">
                 <div class="col-8">
                     <div class="form-group">

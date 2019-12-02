@@ -2,9 +2,9 @@
 
     <div class="container">
     
-        <h1>{$titulo}</h1>
+        <h1 class="text-white font-weight-bold">{$titulo}</h1>
 
-        <form action="actualizarJugador" method="POST">
+        <form class="text-white font-weight-bold" action="actualizarJugador" method="POST">
             <div class="row">
                 <div class="col">
                     <div class="form-group">

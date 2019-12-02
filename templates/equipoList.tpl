@@ -1,9 +1,9 @@
 {include 'templates/header.tpl'}
     <div class="container">
-        <h1>{$titulo}</h1>
+        <h1 class="text-white font-weight-bold">{$titulo}</h1>
 
     {if isset($isAdmin) && $isAdmin==1}
-        <form action="nuevoEquipo" method="POST">
+        <form class="text-white font-weight-bold" action="nuevoEquipo" method="POST">
             <div class="row">
                 <div class="col">
                     <div class="form-group">
@@ -28,12 +28,9 @@
         </form>
     {/if}
 
-        <div class="container">
-            <h1></h1>
-        </div>
+        <br>
 
-
-        <table class="table table-striped table-bordered">
+        <table class="table table-striped table-bordered text-white font-weight-bold">
             <thead class="thead-dark">
                 <tr>
                     <th class="text-center" scope="col">ID Equipo</th>
@@ -43,19 +40,21 @@
                     <th class="text-center" scope="col">Opciones</th>
                 </tr>
             </thead>
-            {foreach $equipos as $equipo}
-                <tr>
-                    <td class="text-center">{$equipo->id_equipo}</td> 
-                    <td class="text-center">{$equipo->nombre}</td> 
-                    <td class="text-center">{$equipo->pais}</td> 
-                    <td class="text-center">{$equipo->cantidad_titulos}</td> 
-                    <td class="text-center"><a href='verEquipo/{$equipo->id_equipo}'><button type="button" class="btn btn-info">Ver Detalle</button></a>
-                        {if isset($isAdmin) && $isAdmin==1}
-                            <a href='editarEquipo/{$equipo->id_equipo}'><button type="button" class="btn btn-success">Editar</button></a>     
-                            <a href='eliminarEquipo/{$equipo->id_equipo}'><button type="button" class="btn btn-danger">Borrar</button></a>
-                        {/if}</td>  
-                </tr>
-            {/foreach}
+            <tbody>
+                {foreach $equipos as $equipo}
+                    <tr class="bg-secondary">
+                        <td class="text-center">{$equipo->id_equipo}</td> 
+                        <td class="text-center">{$equipo->nombre}</td> 
+                        <td class="text-center">{$equipo->pais}</td> 
+                        <td class="text-center">{$equipo->cantidad_titulos}</td> 
+                        <td class="text-center"><a href='verEquipo/{$equipo->id_equipo}'><button type="button" class="btn btn-info">Ver Detalle</button></a>
+                            {if isset($isAdmin) && $isAdmin==1}
+                                <a href='editarEquipo/{$equipo->id_equipo}'><button type="button" class="btn btn-success">Editar</button></a>     
+                                <a href='eliminarEquipo/{$equipo->id_equipo}'><button type="button" class="btn btn-danger">Borrar</button></a>
+                            {/if}</td>  
+                    </tr>
+                {/foreach}
+            </tbody>
         </table>
         
     </div>

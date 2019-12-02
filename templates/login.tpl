@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <div class="container-fluid bg-warning">
+    <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-light bg-dark"></nav>
         <nav class="navbar navbar-expand-lg navbar-light bg-danger"></nav>
         <nav class="navbar navbar-expand-lg navbar-light bg-dark"></nav>
@@ -52,14 +52,12 @@
             </div>
         </div>
 
-        <div class="container">
-            <div class="row"> </div>
-        </div>
+        <br>
 
         <div class="container">
-            <h1 class="text-uppercase font-weight-bold">lista de equipos</h1>
-            <table class="table table-striped table-bordered">
-                <thead class="thead-dark">
+            <h1 class="text-uppercase text-white font-weight-bold">lista de equipos</h1>
+            <table class="table table-striped table-bordered text-white font-weight-bold text-center">
+                <thead class="thead-dark"> 
                     <tr>
                         <th scope="col">ID Equipo</th>
                         <th scope="col">Nombre Del Equipo</th>
@@ -69,7 +67,7 @@
                     </tr>
                 </thead>
                 {foreach $equipos as $equipo}
-                    <tr>
+                    <tr class="bg-secondary">
                         <td>{$equipo->id_equipo}</td>
                         <td>{$equipo->nombre}</td>
                         <td>{$equipo->pais}</td>
@@ -79,12 +77,12 @@
                 {/foreach}
             </table>
         </div>
+     
+        <br>
+
         <div class="container">
-            <h1></h1>
-        </div>
-        <div class="container">
-            <h1 class="text-uppercase font-weight-bold">lista de jugadores</h1>
-            <table class="table table-striped table-bordered">
+            <h1 class="text-uppercase text-white font-weight-bold">lista de jugadores</h1>
+            <table class="table table-striped table-bordered text-white font-weight-bold text-center">
                 <thead class="thead-dark">
                     <tr>
                         <th scope="col">ID Jugador</th>
@@ -95,7 +93,7 @@
                     </tr>
                 </thead>
                 {foreach $jugadores as $jugador}
-                    <tr>
+                    <tr class="bg-secondary">
                         <td>{$jugador->id_jugador}</td>
                         <td>{$jugador->nombreJugador}</td>
                         <td>{$jugador->posicion}</td>

@@ -2,23 +2,22 @@
 
 <div class="container">
 
-    <h1>{$titulo|upper}</h1>
+    <h1 class="text-white font-weight-bold">{$titulo|upper}</h1>
 
     <div class="container-fluid">
-        <h1>Nombre del Jugador: {$jugador->jugador}</h1>
-        <h1>Posicion del Jugador: {$jugador->posicion}</h1>
-        <h1>Equipo del Jugador: {$jugador->nombreEquipo}</h1>
-        <h1>ID del Jugador: {$jugador->id_jugador}</h1>
+        <h1 class="text-white font-weight-bold">Nombre del Jugador: {$jugador->jugador}</h1>
+        <h1 class="text-white font-weight-bold">Posicion del Jugador: {$jugador->posicion}</h1>
+        <h1 class="text-white font-weight-bold">Equipo del Jugador: {$jugador->nombreEquipo}</h1>
+        <h1 class="text-white font-weight-bold">ID del Jugador: {$jugador->id_jugador}</h1>
         {if isset($jugador->imagen)}
             <img src="{$jugador->imagen}" class="img-fluid rounded border border-success" />
         {/if}
     </div>
-    <div class="container-fluid">
-        <h1></h1>
-    </div>
+
+    <br>
 
     {if isset($isAdmin) && (($isAdmin==1)||($isAdmin==0))}
-        <form id="formComentario">
+        <form class="text-white font-weight-bold" id="formComentario">
             <div class="row">
                 <div class="col-8">
                     <div class="form-group">

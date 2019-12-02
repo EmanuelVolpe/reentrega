@@ -2,7 +2,11 @@
 
     <div class="container">
 
-        <table class="table table-striped table-bordered">  
+        <h1 class="text-white font-weight-bold">{$titulo}</h1>
+
+        <br>
+
+        <table class="table table-striped table-bordered text-white font-weight-bold">  
             <thead class="thead-dark">
                 <tr>
                     <th class="text-center" scope="col">ID Usuario</th>
@@ -12,7 +16,7 @@
                 </tr>
             </thead>
             {foreach $usuarios as $usuario}
-                <tr>
+                <tr class="bg-secondary">
                     <td class="text-center">{$usuario->id_usuario}</td> 
                     <td class="text-center">{$usuario->username}</td> 
                     <td class="text-center">{$usuario->administ}</td>
