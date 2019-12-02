@@ -46,7 +46,7 @@ class ComentarioApiController {
     public function crearComentario($params = null) {  
         $data = $this->getData();
 
-        $id = $this->model->save($data->comentario, $data->puntaje, $data->id_jugador, $data->id_usuario);
+        $id = $this->model->save($data->comentario, $data->puntaje, $data->id_jugador_fk, $data->id_usuario_fk);
         
         $comentario = $this->model->get($id);
         if ($comentario)

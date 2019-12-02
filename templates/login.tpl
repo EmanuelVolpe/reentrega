@@ -36,9 +36,9 @@
                         </div>
 
                         {if $error}
-                            <div class="alert alert-danger" role="alert">
-                                {$error}
-                            </div>
+                        <div class="alert alert-danger" role="alert">
+                            {$error}
+                        </div>
                         {/if}
 
                         <button type="submit" class="btn btn-primary font-weight-bold">Ingresar</button>
@@ -46,13 +46,13 @@
                 </div>
                 <div class="col-6">
                     {if !isset($isAdmin)}
-                        <a href='registro'><button type="button" class="btn btn-success btn-lg">REGISTRARME !!!!</button></a>
+                        <a href='registro'><button type="button" class="btn btn-success btn-lg">REGISTRARME!!!!</button></a>
                     {/if}
                 </div>
             </div>
         </div>
 
-        <div class="container"> 
+        <div class="container">
             <div class="row"> </div>
         </div>
 
@@ -70,10 +70,10 @@
                 </thead>
                 {foreach $equipos as $equipo}
                     <tr>
-                        <td>{$equipo->id_equipo}</td> 
-                        <td>{$equipo->nombre}</td> 
-                        <td>{$equipo->pais}</td> 
-                        <td>{$equipo->cantidad_titulos}</td> 
+                        <td>{$equipo->id_equipo}</td>
+                        <td>{$equipo->nombre}</td>
+                        <td>{$equipo->pais}</td>
+                        <td>{$equipo->cantidad_titulos}</td>
                         <td><a href='verEquipo/{$equipo->id_equipo}'><button type="button" class="btn btn-info">Ver Detalle</button></a></td>
                     </tr>
                 {/foreach}
@@ -96,9 +96,9 @@
                 </thead>
                 {foreach $jugadores as $jugador}
                     <tr>
-                        <td>{$jugador->id_jugador}</td> 
-                        <td>{$jugador->nombreJugador}</td> 
-                        <td>{$jugador->posicion}</td> 
+                        <td>{$jugador->id_jugador}</td>
+                        <td>{$jugador->nombreJugador}</td>
+                        <td>{$jugador->posicion}</td>
                         <td>{$jugador->nombreEquipo}</td>
                         <td><a href='verJugador/{$jugador->id_jugador}'><button type="button" class="btn btn-info">Ver Detalle</button></a></td>
                     </tr>

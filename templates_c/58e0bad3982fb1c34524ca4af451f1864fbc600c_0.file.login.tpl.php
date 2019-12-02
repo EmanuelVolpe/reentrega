@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-11-30 21:13:24
+/* Smarty version 3.1.33, created on 2019-11-30 21:25:19
   from '/opt/lampp/htdocs/copiaAPI/templates/login.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5de2cd645e9430_30919254',
+  'unifunc' => 'content_5de2d02f4a4274_27949202',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '58e0bad3982fb1c34524ca4af451f1864fbc600c' => 
     array (
       0 => '/opt/lampp/htdocs/copiaAPI/templates/login.tpl',
-      1 => 1575144613,
+      1 => 1575145402,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5de2cd645e9430_30919254 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5de2d02f4a4274_27949202 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -62,10 +62,10 @@ function content_5de2cd645e9430_30919254 (Smarty_Internal_Template $_smarty_tpl)
                         </div>
 
                         <?php if ($_smarty_tpl->tpl_vars['error']->value) {?>
-                            <div class="alert alert-danger" role="alert">
-                                <?php echo $_smarty_tpl->tpl_vars['error']->value;?>
+                        <div class="alert alert-danger" role="alert">
+                            <?php echo $_smarty_tpl->tpl_vars['error']->value;?>
 
-                            </div>
+                        </div>
                         <?php }?>
 
                         <button type="submit" class="btn btn-primary font-weight-bold">Ingresar</button>
@@ -73,13 +73,13 @@ function content_5de2cd645e9430_30919254 (Smarty_Internal_Template $_smarty_tpl)
                 </div>
                 <div class="col-6">
                     <?php if (!isset($_smarty_tpl->tpl_vars['isAdmin']->value)) {?>
-                        <a href='registro'><button type="button" class="btn btn-success btn-lg">REGISTRARSE !!!!</button></a>
+                        <a href='registro'><button type="button" class="btn btn-success btn-lg">REGISTRARME!!!!</button></a>
                     <?php }?>
                 </div>
             </div>
         </div>
 
-        <div class="container"> 
+        <div class="container">
             <div class="row"> </div>
         </div>
 
@@ -102,13 +102,13 @@ foreach ($_from as $_smarty_tpl->tpl_vars['equipo']->value) {
 ?>
                     <tr>
                         <td><?php echo $_smarty_tpl->tpl_vars['equipo']->value->id_equipo;?>
-</td> 
+</td>
                         <td><?php echo $_smarty_tpl->tpl_vars['equipo']->value->nombre;?>
-</td> 
+</td>
                         <td><?php echo $_smarty_tpl->tpl_vars['equipo']->value->pais;?>
-</td> 
+</td>
                         <td><?php echo $_smarty_tpl->tpl_vars['equipo']->value->cantidad_titulos;?>
-</td> 
+</td>
                         <td><a href='verEquipo/<?php echo $_smarty_tpl->tpl_vars['equipo']->value->id_equipo;?>
 '><button type="button" class="btn btn-info">Ver Detalle</button></a></td>
                     </tr>
@@ -140,11 +140,11 @@ foreach ($_from as $_smarty_tpl->tpl_vars['jugador']->value) {
 ?>
                     <tr>
                         <td><?php echo $_smarty_tpl->tpl_vars['jugador']->value->id_jugador;?>
-</td> 
+</td>
                         <td><?php echo $_smarty_tpl->tpl_vars['jugador']->value->nombreJugador;?>
-</td> 
+</td>
                         <td><?php echo $_smarty_tpl->tpl_vars['jugador']->value->posicion;?>
-</td> 
+</td>
                         <td><?php echo $_smarty_tpl->tpl_vars['jugador']->value->nombreEquipo;?>
 </td>
                         <td><a href='verJugador/<?php echo $_smarty_tpl->tpl_vars['jugador']->value->id_jugador;?>

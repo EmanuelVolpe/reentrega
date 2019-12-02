@@ -27,7 +27,8 @@
 
                         <div class="form-group font-weight-bold">
                             <label>Usuario (email)</label>
-                            <input type="email" name="usernameRegistro" class="form-control" placeholder="Ingrese email">
+                            <input type="email" name="usernameRegistro" class="form-control"
+                                placeholder="Ingrese email">
                         </div>
 
                         <div class="form-group font-weight-bold">
@@ -36,21 +37,22 @@
                         </div>
 
                         {if $error}
-                            <div class="alert alert-danger" role="alert">
-                                {$error}
-                            </div>
+                        <div class="alert alert-danger" role="alert">
+                            {$error}
+                        </div>
                         {/if}
 
                         <button type="submit" class="btn btn-primary font-weight-bold">Registrarme</button>
                     </form>
                 </div>
                 <div class="col-6">
-                    <a href='login'><button type="button" class="btn btn-danger btn-lg">YA SOY USUARIO REGISTRADO !!!!</button></a>  
+                    <a href='login'><button type="button" class="btn btn-danger btn-lg">YA SOY USUARIO REGISTRADO
+                            !!!!</button></a>
                 </div>
             </div>
         </div>
 
-        <div class="container"> 
+        <div class="container">
             <div class="row"> </div>
         </div>
 
@@ -68,13 +70,14 @@
                     </tr>
                 </thead>
                 {foreach $equipos as $equipo}
-                    <tr>
-                        <td>{$equipo->id_equipo}</td> 
-                        <td>{$equipo->nombre}</td> 
-                        <td>{$equipo->pais}</td> 
-                        <td>{$equipo->cantidad_titulos}</td> 
-                        <td><a href='verEquipo/{$equipo->id_equipo}'><button type="button" class="btn btn-info">Ver Detalle</button></a></td>
-                    </tr>
+                <tr>
+                    <td>{$equipo->id_equipo}</td>
+                    <td>{$equipo->nombre}</td>
+                    <td>{$equipo->pais}</td>
+                    <td>{$equipo->cantidad_titulos}</td>
+                    <td><a href='verEquipo/{$equipo->id_equipo}'><button type="button" class="btn btn-info">Ver
+                                Detalle</button></a></td>
+                </tr>
                 {/foreach}
             </table>
         </div>
@@ -94,13 +97,14 @@
                     </tr>
                 </thead>
                 {foreach $jugadores as $jugador}
-                    <tr>
-                        <td>{$jugador->id_jugador}</td> 
-                        <td>{$jugador->nombreJugador}</td> 
-                        <td>{$jugador->posicion}</td> 
-                        <td>{$jugador->nombreEquipo}</td>
-                        <td><a href='verJugador/{$jugador->id_jugador}'><button type="button" class="btn btn-info">Ver Detalle</button></a></td>
-                    </tr>
+                <tr>
+                    <td>{$jugador->id_jugador}</td>
+                    <td>{$jugador->nombreJugador}</td>
+                    <td>{$jugador->posicion}</td>
+                    <td>{$jugador->nombreEquipo}</td>
+                    <td><a href='verJugador/{$jugador->id_jugador}'><button type="button" class="btn btn-info">Ver
+                                Detalle</button></a></td>
+                </tr>
                 {/foreach}
             </table>
         </div>

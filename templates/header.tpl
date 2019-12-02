@@ -9,6 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="js/comentarios.js"></script>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <!--link rel="stylesheet" href="css/style.css"-->
     <title>{$titulo}</title>
 </head>
 

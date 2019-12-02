@@ -32,8 +32,8 @@ document.addEventListener("DOMContentLoaded", function () {
         let comentarios = {
             comentario: document.querySelector("#comentario").value,
             puntaje:    document.querySelector("#puntaje").value,
-            id_jugador: document.querySelector("#id_jugador").value,
-            id_usuario: document.querySelector("#id_usuario").value,
+            id_jugador_fk: document.querySelector("#id_jugador").value,
+            id_usuario_fk: document.querySelector("#id_usuario").value,
             isAdmin:    document.querySelector("#isAdmin").value
         }
 

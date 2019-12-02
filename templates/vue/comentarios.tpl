@@ -15,6 +15,13 @@
                     <td v-if="isAdmin" class="col-6 text-center"><button type="button" class="btn btn-primary" v-on:click="(event)=>{eliminarComentario(event, comentario.id_comentario)}">Eliminar Comentario</button></td>    
                 </tr>
             </table>
+            <div>
+            <select name="ordenar" id="orden">
+                <option value="asc">Ascendente</option>
+                <option value="desc">Descendente</option>
+            </select>
+            <button type="button" class="btn btn-primary" id="btn-ordenar">Cambiar</button>
+     </div>
 
         <h3 class="font-weight-bold"> El promedio de los puntajes es: {{promedio}}</h3>   
     </section>

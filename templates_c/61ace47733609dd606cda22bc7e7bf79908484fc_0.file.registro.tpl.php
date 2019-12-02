@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-11-30 21:13:19
+/* Smarty version 3.1.33, created on 2019-12-02 00:01:43
   from '/opt/lampp/htdocs/copiaAPI/templates/registro.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5de2cd5f282076_70838022',
+  'unifunc' => 'content_5de4465747e960_42071236',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '61ace47733609dd606cda22bc7e7bf79908484fc' => 
     array (
       0 => '/opt/lampp/htdocs/copiaAPI/templates/registro.tpl',
-      1 => 1575144795,
+      1 => 1575145229,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5de2cd5f282076_70838022 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5de4465747e960_42071236 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -53,7 +53,8 @@ function content_5de2cd5f282076_70838022 (Smarty_Internal_Template $_smarty_tpl)
 
                         <div class="form-group font-weight-bold">
                             <label>Usuario (email)</label>
-                            <input type="email" name="usernameRegistro" class="form-control" placeholder="Ingrese email">
+                            <input type="email" name="usernameRegistro" class="form-control"
+                                placeholder="Ingrese email">
                         </div>
 
                         <div class="form-group font-weight-bold">
@@ -62,22 +63,23 @@ function content_5de2cd5f282076_70838022 (Smarty_Internal_Template $_smarty_tpl)
                         </div>
 
                         <?php if ($_smarty_tpl->tpl_vars['error']->value) {?>
-                            <div class="alert alert-danger" role="alert">
-                                <?php echo $_smarty_tpl->tpl_vars['error']->value;?>
+                        <div class="alert alert-danger" role="alert">
+                            <?php echo $_smarty_tpl->tpl_vars['error']->value;?>
 
-                            </div>
+                        </div>
                         <?php }?>
 
                         <button type="submit" class="btn btn-primary font-weight-bold">Registrarme</button>
                     </form>
                 </div>
                 <div class="col-6">
-                    <a href='login'><button type="button" class="btn btn-danger btn-lg">YA SOY USUARIO REGISTRADO !!!!</button></a>  
+                    <a href='login'><button type="button" class="btn btn-danger btn-lg">YA SOY USUARIO REGISTRADO
+                            !!!!</button></a>
                 </div>
             </div>
         </div>
 
-        <div class="container"> 
+        <div class="container">
             <div class="row"> </div>
         </div>
 
@@ -99,18 +101,19 @@ $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->t
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['equipo']->value) {
 ?>
-                    <tr>
-                        <td><?php echo $_smarty_tpl->tpl_vars['equipo']->value->id_equipo;?>
-</td> 
-                        <td><?php echo $_smarty_tpl->tpl_vars['equipo']->value->nombre;?>
-</td> 
-                        <td><?php echo $_smarty_tpl->tpl_vars['equipo']->value->pais;?>
-</td> 
-                        <td><?php echo $_smarty_tpl->tpl_vars['equipo']->value->cantidad_titulos;?>
-</td> 
-                        <td><a href='verEquipo/<?php echo $_smarty_tpl->tpl_vars['equipo']->value->id_equipo;?>
-'><button type="button" class="btn btn-info">Ver Detalle</button></a></td>
-                    </tr>
+                <tr>
+                    <td><?php echo $_smarty_tpl->tpl_vars['equipo']->value->id_equipo;?>
+</td>
+                    <td><?php echo $_smarty_tpl->tpl_vars['equipo']->value->nombre;?>
+</td>
+                    <td><?php echo $_smarty_tpl->tpl_vars['equipo']->value->pais;?>
+</td>
+                    <td><?php echo $_smarty_tpl->tpl_vars['equipo']->value->cantidad_titulos;?>
+</td>
+                    <td><a href='verEquipo/<?php echo $_smarty_tpl->tpl_vars['equipo']->value->id_equipo;?>
+'><button type="button" class="btn btn-info">Ver
+                                Detalle</button></a></td>
+                </tr>
                 <?php
 }
 }
@@ -137,18 +140,19 @@ $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->t
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['jugador']->value) {
 ?>
-                    <tr>
-                        <td><?php echo $_smarty_tpl->tpl_vars['jugador']->value->id_jugador;?>
-</td> 
-                        <td><?php echo $_smarty_tpl->tpl_vars['jugador']->value->nombreJugador;?>
-</td> 
-                        <td><?php echo $_smarty_tpl->tpl_vars['jugador']->value->posicion;?>
-</td> 
-                        <td><?php echo $_smarty_tpl->tpl_vars['jugador']->value->nombreEquipo;?>
+                <tr>
+                    <td><?php echo $_smarty_tpl->tpl_vars['jugador']->value->id_jugador;?>
 </td>
-                        <td><a href='verJugador/<?php echo $_smarty_tpl->tpl_vars['jugador']->value->id_jugador;?>
-'><button type="button" class="btn btn-info">Ver Detalle</button></a></td>
-                    </tr>
+                    <td><?php echo $_smarty_tpl->tpl_vars['jugador']->value->nombreJugador;?>
+</td>
+                    <td><?php echo $_smarty_tpl->tpl_vars['jugador']->value->posicion;?>
+</td>
+                    <td><?php echo $_smarty_tpl->tpl_vars['jugador']->value->nombreEquipo;?>
+</td>
+                    <td><a href='verJugador/<?php echo $_smarty_tpl->tpl_vars['jugador']->value->id_jugador;?>
+'><button type="button" class="btn btn-info">Ver
+                                Detalle</button></a></td>
+                </tr>
                 <?php
 }
 }

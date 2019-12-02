@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 22-11-2019 a las 02:15:50
+-- Tiempo de generación: 02-12-2019 a las 01:13:07
 -- Versión del servidor: 10.1.34-MariaDB
 -- Versión de PHP: 7.2.8
 
@@ -32,17 +32,17 @@ CREATE TABLE `comentario` (
   `id_comentario` int(100) NOT NULL,
   `comentario` varchar(500) NOT NULL,
   `puntaje` int(1) NOT NULL,
-  `id_jugador` int(2) NOT NULL,
-  `id_usuario` int(2) NOT NULL
+  `id_jugador_FK` int(2) NOT NULL,
+  `id_usuario_FK` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- RELACIONES PARA LA TABLA `comentario`:
---   `id_usuario`
---       `usuario` -> `id_usuario`
---   `id_jugador`
---       `jugador` -> `id_jugador`
+-- Volcado de datos para la tabla `comentario`
 --
+
+INSERT INTO `comentario` (`id_comentario`, `comentario`, `puntaje`, `id_jugador_FK`, `id_usuario_FK`) VALUES
+(93, 'pppppppppppppppppppp', 4, 101, 17),
+(101, 'pepeuuuuuuuuuuuu', 1, 101, 1);
 
 -- --------------------------------------------------------
 
@@ -58,18 +58,14 @@ CREATE TABLE `equipo` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- RELACIONES PARA LA TABLA `equipo`:
---
-
---
 -- Volcado de datos para la tabla `equipo`
 --
 
 INSERT INTO `equipo` (`id_equipo`, `nombre`, `pais`, `cantidad_titulos`) VALUES
 (43, 'Riveriiiiiiiiiii', 'ARG', 555),
 (44, 'Liverpool', 'ING', 15),
-(59, 'Empleados', 'ARGENTINA', 4),
-(60, 'Ajax', 'tttttttttttttttttttt', 8);
+(59, 'Empleados', 'ARGENTINA', 1200),
+(60, 'Ajax', 'Noruega', 8);
 
 -- --------------------------------------------------------
 
@@ -86,19 +82,14 @@ CREATE TABLE `jugador` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- RELACIONES PARA LA TABLA `jugador`:
---   `id_equipo`
---       `equipo` -> `id_equipo`
---
-
---
 -- Volcado de datos para la tabla `jugador`
 --
 
 INSERT INTO `jugador` (`id_jugador`, `nombre`, `id_equipo`, `posicion`, `imagen`) VALUES
 (101, 'manu', 43, 'volante', 'images/5dcf20cd3c6c6.jpg'),
-(108, 'ppp', 60, 'volante', 'images/5dcf242c6d2dc.jpg'),
-(109, 'eeeeeeeeeeeee', 60, 'arquero', 'images/5dd438edd63cb.jpg');
+(111, 'qqqqqq', 43, 'defensor', NULL),
+(112, 'Ajaxiiiiiiiiiiiii', 43, 'arquero', 'images/5de44e3d6e614.jpg'),
+(113, 'iiiii', 43, 'volante', NULL);
 
 -- --------------------------------------------------------
 
@@ -114,18 +105,14 @@ CREATE TABLE `usuario` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- RELACIONES PARA LA TABLA `usuario`:
---
-
---
 -- Volcado de datos para la tabla `usuario`
 --
 
 INSERT INTO `usuario` (`id_usuario`, `username`, `pass`, `administ`) VALUES
 (1, 'manu@yo.com', '$2y$10$yPutZ76TH7AbzE8LS7.Zj.yc5BjuLcIpHz39IH9mFgjkTn1WMJMAO', 1),
-(15, 'u@u', '$2y$10$A.hRl8zvRf4PwO9sc/KLcejTcqEKAp9LiDwEMabKIXWhSXSRTpqqW', 0),
-(17, 'a@a', '$2y$10$fR0TtQzQCX95CLA/pb9hzukOKhURcwzwiwIRvUqqvq3/9/aSILxQO', 1),
-(18, 't@t', '$2y$10$bm1wlkUoJ91PEVMSOMVLouS/nKpKEvOhM3eauFB9R4HLrb7EidT2O', 0);
+(17, 'a@a', '$2y$10$fR0TtQzQCX95CLA/pb9hzukOKhURcwzwiwIRvUqqvq3/9/aSILxQO', 0),
+(24, 't@t', '$2y$10$1a8H3FZF2A/LIbwE/SYEGehn7yLoQRuLzx0PECNuRI0/arLpFezcy', 0),
+(25, 'u@u', '$2y$10$68Eba8p6bwg7tcozU5rKoeBpL8FWQHiqn1PqvBEgPTnW4QjKuYpBe', 0);
 
 --
 -- Índices para tablas volcadas
@@ -136,8 +123,8 @@ INSERT INTO `usuario` (`id_usuario`, `username`, `pass`, `administ`) VALUES
 --
 ALTER TABLE `comentario`
   ADD PRIMARY KEY (`id_comentario`),
-  ADD KEY `id_jugador` (`id_jugador`,`id_usuario`),
-  ADD KEY `id_usuario` (`id_usuario`);
+  ADD KEY `id_jugador` (`id_jugador_FK`,`id_usuario_FK`),
+  ADD KEY `id_usuario` (`id_usuario_FK`);
 
 --
 -- Indices de la tabla `equipo`
@@ -166,7 +153,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `comentario`
 --
 ALTER TABLE `comentario`
-  MODIFY `id_comentario` int(100) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_comentario` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=102;
 
 --
 -- AUTO_INCREMENT de la tabla `equipo`
@@ -178,13 +165,13 @@ ALTER TABLE `equipo`
 -- AUTO_INCREMENT de la tabla `jugador`
 --
 ALTER TABLE `jugador`
-  MODIFY `id_jugador` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=110;
+  MODIFY `id_jugador` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=114;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id_usuario` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id_usuario` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- Restricciones para tablas volcadas
@@ -194,8 +181,8 @@ ALTER TABLE `usuario`
 -- Filtros para la tabla `comentario`
 --
 ALTER TABLE `comentario`
-  ADD CONSTRAINT `comentario_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuario` (`id_usuario`),
-  ADD CONSTRAINT `comentario_ibfk_2` FOREIGN KEY (`id_jugador`) REFERENCES `jugador` (`id_jugador`);
+  ADD CONSTRAINT `comentario_ibfk_1` FOREIGN KEY (`id_usuario_FK`) REFERENCES `usuario` (`id_usuario`),
+  ADD CONSTRAINT `comentario_ibfk_2` FOREIGN KEY (`id_jugador_FK`) REFERENCES `jugador` (`id_jugador`);
 
 --
 -- Filtros para la tabla `jugador`
