@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-11-30 16:16:16
+/* Smarty version 3.1.33, created on 2019-12-02 18:40:52
   from '/opt/lampp/htdocs/copiaAPI/templates/jugadorDetail.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5de287c0350f98_26558860',
+  'unifunc' => 'content_5de54ca47b94a9_03572773',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '656bb54bb0e20f89cabc3ed89cfd88afecf7bc84' => 
     array (
       0 => '/opt/lampp/htdocs/copiaAPI/templates/jugadorDetail.tpl',
-      1 => 1575126971,
+      1 => 1575308398,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5de287c0350f98_26558860 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5de54ca47b94a9_03572773 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:templates/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -50,7 +50,7 @@ $_smarty_tpl->_subTemplateRender('file:templates/header.tpl', $_smarty_tpl->cach
         <h1></h1>
     </div>
 
-    <?php if (isset($_smarty_tpl->tpl_vars['isAdmin']->value) && ($_smarty_tpl->tpl_vars['isAdmin']->value == 1)) {?>
+    <?php if (isset($_smarty_tpl->tpl_vars['isAdmin']->value) && (($_smarty_tpl->tpl_vars['isAdmin']->value == 1) || ($_smarty_tpl->tpl_vars['isAdmin']->value == 0))) {?>
         <form id="formComentario">
             <div class="row">
                 <div class="col-8">
@@ -79,12 +79,7 @@ $_smarty_tpl->_subTemplateRender('file:templates/header.tpl', $_smarty_tpl->cach
                         Comentario</button>
                 </div>
             </div>
-            <div class="container-fluid">
-                <h1></h1>
-            </div>
-            <div class="container-fluid">
-                <h1></h1>
-            </div>
+            <br>
             <div class="row">
                 <div class="col">
                     <div class="form-group">
@@ -106,7 +101,7 @@ $_smarty_tpl->_subTemplateRender('file:templates/header.tpl', $_smarty_tpl->cach
                 </div>
             </div>
         </form>
-    <?php } elseif (isset($_smarty_tpl->tpl_vars['isAdmin']->value) && ($_smarty_tpl->tpl_vars['isAdmin']->value == 0)) {?>
+    <?php } else { ?>
        <form id="formComentario">
             <div class="row">
                 <div class="col">
@@ -115,25 +110,9 @@ $_smarty_tpl->_subTemplateRender('file:templates/header.tpl', $_smarty_tpl->cach
 ">
                     </div>
                 </div>
-                <div class="col">
-                    <div class="form-group">
-                        ID USUARIO<input id="id_usuario" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['userID']->value;?>
-">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="form-group">
-                        USUARIO ADMIN<input id="isAdmin" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['isAdmin']->value;?>
-">
-                    </div>
-                </div>
             </div>
         </form>
     <?php }?>
-
-
-
-
 
     <?php $_smarty_tpl->_subTemplateRender('file:templates/vue/comentarios.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>

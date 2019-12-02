@@ -29,9 +29,7 @@ class ComentarioApiController {
                 $this->view->response($comentarios, 200); 
             else
                 $this->view->response("El jugador con id={$id} no tiene comentarios", 404);
-  
     }
-
 
     public function deleteComentario($params = null) {
         $id = $params[':ID'];
@@ -45,7 +43,6 @@ class ComentarioApiController {
 
     public function crearComentario($params = null) {  
         $data = $this->getData();
-
         $id = $this->model->save($data->comentario, $data->puntaje, $data->id_jugador_fk, $data->id_usuario_fk);
         
         $comentario = $this->model->get($id);
@@ -53,12 +50,12 @@ class ComentarioApiController {
             $this->view->response($comentario, 200);
         else
             $this->view->response("El comentario no fue creado", 500);
-
     }
 
     public function verComentariosJugador($params=null){
         $idJugador = $_GET["idJugador"];
         $orden = $_GET["order"];
+        
         
         if($_GET["order"]=="asc"){
             $comentarios = $this->model->getComentariosJugadorASC($idJugador);
@@ -68,9 +65,7 @@ class ComentarioApiController {
             $comentarios = $this->model->getComentariosJugadorDESC($idJugador);
             $this->view->response($comentarios, 200);
         }
-        //$comentarios = array("comentarios"=> $comentarios);
-        //$this->view->response($comentarios, 200);
+
     }
-    
 
 }

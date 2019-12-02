@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-11-30 21:25:19
+/* Smarty version 3.1.33, created on 2019-12-02 19:26:25
   from '/opt/lampp/htdocs/copiaAPI/templates/login.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5de2d02f4a4274_27949202',
+  'unifunc' => 'content_5de5575189d360_04026727',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '58e0bad3982fb1c34524ca4af451f1864fbc600c' => 
     array (
       0 => '/opt/lampp/htdocs/copiaAPI/templates/login.tpl',
-      1 => 1575145402,
+      1 => 1575306785,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5de2d02f4a4274_27949202 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5de5575189d360_04026727 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -62,10 +62,10 @@ function content_5de2d02f4a4274_27949202 (Smarty_Internal_Template $_smarty_tpl)
                         </div>
 
                         <?php if ($_smarty_tpl->tpl_vars['error']->value) {?>
-                        <div class="alert alert-danger" role="alert">
-                            <?php echo $_smarty_tpl->tpl_vars['error']->value;?>
+                            <div class="alert alert-danger" role="alert">
+                                <?php echo $_smarty_tpl->tpl_vars['error']->value;?>
 
-                        </div>
+                            </div>
                         <?php }?>
 
                         <button type="submit" class="btn btn-primary font-weight-bold">Ingresar</button>

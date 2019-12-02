@@ -48,7 +48,8 @@ class LoginController {
             header("Location: " . BASE_URL . "verEquipos");
         } 
         else {
-            $this->view->showLoginView("Login incorrecto",$equipos, $jugadores);
+            header("Location: " . BASE_URL . "verEquipos");
+            //$this->view->showLoginView("Login incorrecto",$equipos, $jugadores);
         }
     }
     

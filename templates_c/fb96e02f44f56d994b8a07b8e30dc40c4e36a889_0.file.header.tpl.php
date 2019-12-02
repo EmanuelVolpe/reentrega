@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-12-02 00:32:34
+/* Smarty version 3.1.33, created on 2019-12-02 18:08:25
   from '/opt/lampp/htdocs/copiaAPI/templates/header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5de44d923b9070_71787820',
+  'unifunc' => 'content_5de54509935177_24188742',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fb96e02f44f56d994b8a07b8e30dc40c4e36a889' => 
     array (
       0 => '/opt/lampp/htdocs/copiaAPI/templates/header.tpl',
-      1 => 1575243151,
+      1 => 1575306501,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5de44d923b9070_71787820 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5de54509935177_24188742 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -107,6 +107,9 @@ function content_5de44d923b9070_71787820 (Smarty_Internal_Template $_smarty_tpl)
                 </div>
                 <div class="navbar-nav">
                     <a class="nav-item nav-link" href="verJugadores">Jugadores</a>
+                </div>
+                <div class="navbar-nav ml-auto">
+                    <span class="navbar-text">USUARIO NO REGISTRADO</span>
                 </div>
             </div>
         </nav>

@@ -61,12 +61,11 @@ document.addEventListener("DOMContentLoaded", function () {
         let id_jugador = document.querySelector("#id_jugador").value;
         let isAdmin = document.querySelector("#isAdmin").value;
         let orden = document.querySelector("#orden").value;
-        console.log(orden, id_jugador, isAdmin);
-
+        let cadena = "api/comentarios?idJugador=" + id_jugador +"&order=" + orden;
         //por POST
         //fetch("api/comentarios/ + id_jugador)
 
-        fetch("api/comentarios?idJugador=" + id_jugador +"&order="+orden)
+        fetch(cadena)
             .then(response => response.json())
             .then(comentarios => {
                 console.log(comentarios);

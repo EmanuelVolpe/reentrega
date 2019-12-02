@@ -77,6 +77,9 @@
                 <div class="navbar-nav">
                     <a class="nav-item nav-link" href="verJugadores">Jugadores</a>
                 </div>
+                <div class="navbar-nav ml-auto">
+                    <span class="navbar-text">USUARIO NO REGISTRADO</span>
+                </div>
             </div>
         </nav>
     {/if}

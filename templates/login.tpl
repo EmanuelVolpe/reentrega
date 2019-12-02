@@ -36,9 +36,9 @@
                         </div>
 
                         {if $error}
-                        <div class="alert alert-danger" role="alert">
-                            {$error}
-                        </div>
+                            <div class="alert alert-danger" role="alert">
+                                {$error}
+                            </div>
                         {/if}
 
                         <button type="submit" class="btn btn-primary font-weight-bold">Ingresar</button>

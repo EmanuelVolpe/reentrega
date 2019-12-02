@@ -76,4 +76,5 @@ class JugadorModel {
         $query->execute(array($idEquipo, $nombre, $posicion, $idJugador));
     }
 
+
 }

@@ -14,13 +14,14 @@
     $r = new Router();
 
     //RUTAS REGISTRO
-
     $r->addRoute("registro",      "GET",  "RegistroController", "showRegistro");
     $r->addRoute("registrarUser", "POST", "RegistroController", "registrarUsuario");
+    
     // RUTAS LOGIN
     $r->addRoute("login",         "GET",  "LoginController", "showLogin");
     $r->addRoute("verifyUser",    "POST", "LoginController", "verificarUsuario");
     $r->addRoute("logout",        "GET",  "LoginController", "logout");
+    
     // RUTAS EQUIPOS 
     $r->addRoute("verEquipos",         "GET",   "EquipoController", "showEquipos");
     $r->addRoute("verEquipo/:ID",      "GET",   "EquipoController", "showDetalleEquipo");
@@ -28,6 +29,7 @@
     $r->addRoute("eliminarEquipo/:ID", "GET",   "EquipoController", "eliminaEquipo");
     $r->addRoute("editarEquipo/:ID",   "GET",   "EquipoController", "editaEquipo");
     $r->addRoute("actualizarEquipo",   "POST",  "EquipoController", "actualizaEquipo");
+   
     // RUTAS JUGADORES
     $r->addRoute("verJugadores",        "GET",   "JugadorController", "showJugadores");
     $r->addRoute("verJugador/:ID",      "GET",   "JugadorController", "showDetalleJugador");
@@ -35,6 +37,7 @@
     $r->addRoute("eliminarJugador/:ID", "GET",   "JugadorController", "eliminaJugador");
     $r->addRoute("editarJugador/:ID",   "GET",   "JugadorController", "editaJugador");
     $r->addRoute("actualizarJugador",   "POST",  "JugadorController", "actualizaJugador");
+    
     // RUTAS USUARIOS
     $r->addRoute("verUsuarios",          "GET",   "LoginController", "showUsuarios");
     $r->addRoute("eliminarUsuario/:ID",  "GET",   "LoginController", "eliminaUsuario");

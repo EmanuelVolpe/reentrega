@@ -17,7 +17,7 @@
         <h1></h1>
     </div>
 
-    {if isset($isAdmin) && ($isAdmin==1)}
+    {if isset($isAdmin) && (($isAdmin==1)||($isAdmin==0))}
         <form id="formComentario">
             <div class="row">
                 <div class="col-8">
@@ -46,12 +46,7 @@
                         Comentario</button>
                 </div>
             </div>
-            <div class="container-fluid">
-                <h1></h1>
-            </div>
-            <div class="container-fluid">
-                <h1></h1>
-            </div>
+            <br>
             <div class="row">
                 <div class="col">
                     <div class="form-group">
@@ -70,7 +65,7 @@
                 </div>
             </div>
         </form>
-    {elseif isset($isAdmin) && ($isAdmin==0)}
+    {else}
        <form id="formComentario">
             <div class="row">
                 <div class="col">
@@ -78,23 +73,9 @@
                         ID JUGADOR<input id="id_jugador" class="form-control" value="{$jugador->id_jugador}">
                     </div>
                 </div>
-                <div class="col">
-                    <div class="form-group">
-                        ID USUARIO<input id="id_usuario" class="form-control" value="{$userID}">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="form-group">
-                        USUARIO ADMIN<input id="isAdmin" class="form-control" value="{$isAdmin}">
-                    </div>
-                </div>
             </div>
         </form>
     {/if}
-
-
-
-
 
     {include 'templates/vue/comentarios.tpl'}
 
