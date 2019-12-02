@@ -52,10 +52,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     })
 
-    //document.querySelector("#enviaComentario").addEventListener("click", crearComentario);
-
-    
-
     function getComentarios() {
         // inicia la carga
         app.loading = true;
@@ -70,7 +66,6 @@ document.addEventListener("DOMContentLoaded", function () {
             .then(comentarios => {
                 console.table(comentarios);
                 app.comentarios = comentarios;
-                //app.isAdmin = isAdmin;
                 app.loading = false;
                 app.promedio = promedio(comentarios);
             })
