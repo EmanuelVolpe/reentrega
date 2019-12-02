@@ -21,45 +21,45 @@ document.addEventListener("DOMContentLoaded", function () {
                     alert("EL COMENTARIO FUE BORRADO CON EXITO")
                 })
                 .catch(error=>console.log(error));
+            },
+            crearComentario: function(event){
+                event.preventDefault();
+        
+                let comentarios = {
+                    comentario:    document.querySelector("#comentario").value,
+                    puntaje:       document.querySelector("#puntaje").value,
+                    id_jugador_fk: document.querySelector("#id_jugador").value,
+                    id_usuario_fk: document.querySelector("#id_usuario").value,
+                    isAdmin:       document.querySelector("#isAdmin").value
+                }
+        
+                fetch('api/comentarios', {
+                        "method": 'POST',
+                        "headers": {
+                            'Content-Type': 'application/json'
+                        },
+                        "body": JSON.stringify(comentarios)
+                    })
+                    .then(response => {
+                        if (response.status == 200) {
+                            alert("COMENTARIO ENVIADO");
+                            getComentarios();
+                        }
+                        else 
+                            alert("error");
+                    })
             }
         }
     })
 
-    document.querySelector("#enviaComentario").addEventListener("click", crearComentario);
+    //document.querySelector("#enviaComentario").addEventListener("click", crearComentario);
 
-    function crearComentario(e) {
-        e.preventDefault();
-
-        let comentarios = {
-            comentario: document.querySelector("#comentario").value,
-            puntaje:    document.querySelector("#puntaje").value,
-            id_jugador_fk: document.querySelector("#id_jugador").value,
-            id_usuario_fk: document.querySelector("#id_usuario").value,
-            isAdmin:    document.querySelector("#isAdmin").value
-        }
-
-        fetch('api/comentarios', {
-                "method": 'POST',
-                "headers": {
-                    'Content-Type': 'application/json'
-                },
-                "body": JSON.stringify(comentarios)
-            })
-            .then(response => {
-                if (response.status == 200) {
-                    alert("COMENTARIO ENVIADO");
-                    getComentarios();
-                }
-                else 
-                    alert("error");
-            })
-    }
+    
 
     function getComentarios() {
         // inicia la carga
         app.loading = true;
         let id_jugador = document.querySelector("#id_jugador").value;
-        let isAdmin = document.querySelector("#isAdmin").value;
         let orden = document.querySelector("#orden").value;
         let cadena = "api/comentarios?idJugador=" + id_jugador +"&order=" + orden;
         //por POST
@@ -68,9 +68,9 @@ document.addEventListener("DOMContentLoaded", function () {
         fetch(cadena)
             .then(response => response.json())
             .then(comentarios => {
-                console.log(comentarios);
+                console.table(comentarios);
                 app.comentarios = comentarios;
-                app.isAdmin = isAdmin;
+                //app.isAdmin = isAdmin;
                 app.loading = false;
                 app.promedio = promedio(comentarios);
             })

@@ -37,7 +37,7 @@ class ComentarioModel {
     /**
      * Elimina un comentario de la BBDD según el id pasado.
      */
-    function delete($idComentario) {
+    public function delete($idComentario) {
 
         $query = $this->db->prepare('DELETE FROM comentario WHERE id_comentario = ?');
         $query->execute([$idComentario]);

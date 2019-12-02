@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-12-02 18:40:52
+/* Smarty version 3.1.33, created on 2019-12-02 21:32:48
   from '/opt/lampp/htdocs/copiaAPI/templates/jugadorDetail.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5de54ca47b94a9_03572773',
+  'unifunc' => 'content_5de574f08c6673_16571903',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '656bb54bb0e20f89cabc3ed89cfd88afecf7bc84' => 
     array (
       0 => '/opt/lampp/htdocs/copiaAPI/templates/jugadorDetail.tpl',
-      1 => 1575308398,
+      1 => 1575318746,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5de54ca47b94a9_03572773 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5de574f08c6673_16571903 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:templates/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -72,13 +72,12 @@ $_smarty_tpl->_subTemplateRender('file:templates/header.tpl', $_smarty_tpl->cach
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <!--div class="row">
                 <div class="col-8"></div>
                 <div class="col-4">
-                    <button type="submit" class="btn btn-success font-weight-bold" id="enviaComentario">Enviar
-                        Comentario</button>
+                    <button type="submit" class="btn btn-success font-weight-bold" id="enviaComentario">Enviar Comentario</button>
                 </div>
-            </div>
+            </div-->
             <br>
             <div class="row">
                 <div class="col">

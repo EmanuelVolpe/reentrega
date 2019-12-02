@@ -53,10 +53,10 @@ class ComentarioApiController {
     }
 
     public function verComentariosJugador($params=null){
+        
         $idJugador = $_GET["idJugador"];
         $orden = $_GET["order"];
-        
-        
+               
         if($_GET["order"]=="asc"){
             $comentarios = $this->model->getComentariosJugadorASC($idJugador);
             $this->view->response($comentarios, 200);
@@ -65,7 +65,6 @@ class ComentarioApiController {
             $comentarios = $this->model->getComentariosJugadorDESC($idJugador);
             $this->view->response($comentarios, 200);
         }
-
     }
 
 }
