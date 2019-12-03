@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-12-02 23:05:15
+/* Smarty version 3.1.33, created on 2019-12-03 13:59:20
   from '/opt/lampp/htdocs/copiaAPI/templates/login.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5de58a9b5ae378_83202202',
+  'unifunc' => 'content_5de65c28996125_73515521',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '58e0bad3982fb1c34524ca4af451f1864fbc600c' => 
     array (
       0 => '/opt/lampp/htdocs/copiaAPI/templates/login.tpl',
-      1 => 1575324310,
+      1 => 1575377957,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5de58a9b5ae378_83202202 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5de65c28996125_73515521 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -83,7 +83,7 @@ function content_5de58a9b5ae378_83202202 (Smarty_Internal_Template $_smarty_tpl)
 
         <div class="container">
             <h1 class="text-uppercase text-white font-weight-bold">lista de equipos</h1>
-            <table class="table table-striped table-bordered text-white font-weight-bold text-center">
+            <table class="table table-striped table-bordered font-weight-bold text-center">
                 <thead class="thead-dark"> 
                     <tr>
                         <th scope="col">ID Equipo</th>
@@ -93,27 +93,29 @@ function content_5de58a9b5ae378_83202202 (Smarty_Internal_Template $_smarty_tpl)
                         <th scope="col">Opciones</th>
                     </tr>
                 </thead>
-                <?php
+                <tbody class="bg-white">
+                    <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['equipos']->value, 'equipo');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['equipo']->value) {
 ?>
-                    <tr class="bg-secondary">
-                        <td><?php echo $_smarty_tpl->tpl_vars['equipo']->value->id_equipo;?>
+                        <tr>
+                            <td><?php echo $_smarty_tpl->tpl_vars['equipo']->value->id_equipo;?>
 </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['equipo']->value->nombre;?>
+                            <td><?php echo $_smarty_tpl->tpl_vars['equipo']->value->nombre;?>
 </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['equipo']->value->pais;?>
+                            <td><?php echo $_smarty_tpl->tpl_vars['equipo']->value->pais;?>
 </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['equipo']->value->cantidad_titulos;?>
+                            <td><?php echo $_smarty_tpl->tpl_vars['equipo']->value->cantidad_titulos;?>
 </td>
-                        <td><a href='verEquipo/<?php echo $_smarty_tpl->tpl_vars['equipo']->value->id_equipo;?>
+                            <td><a href='verEquipo/<?php echo $_smarty_tpl->tpl_vars['equipo']->value->id_equipo;?>
 '><button type="button" class="btn btn-info">Ver Detalle</button></a></td>
-                    </tr>
-                <?php
+                        </tr>
+                    <?php
 }
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+                </tbody>
             </table>
         </div>
      
@@ -121,7 +123,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
         <div class="container">
             <h1 class="text-uppercase text-white font-weight-bold">lista de jugadores</h1>
-            <table class="table table-striped table-bordered text-white font-weight-bold text-center">
+            <table class="table table-striped table-bordered font-weight-bold text-center">
                 <thead class="thead-dark">
                     <tr>
                         <th scope="col">ID Jugador</th>
@@ -131,27 +133,29 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                         <th scope="col">Opciones</th>
                     </tr>
                 </thead>
-                <?php
+                <tbody class="bg-white">
+                    <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['jugadores']->value, 'jugador');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['jugador']->value) {
 ?>
-                    <tr class="bg-secondary">
-                        <td><?php echo $_smarty_tpl->tpl_vars['jugador']->value->id_jugador;?>
+                        <tr>
+                            <td><?php echo $_smarty_tpl->tpl_vars['jugador']->value->id_jugador;?>
 </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['jugador']->value->nombreJugador;?>
+                            <td><?php echo $_smarty_tpl->tpl_vars['jugador']->value->nombreJugador;?>
 </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['jugador']->value->posicion;?>
+                            <td><?php echo $_smarty_tpl->tpl_vars['jugador']->value->posicion;?>
 </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['jugador']->value->nombreEquipo;?>
+                            <td><?php echo $_smarty_tpl->tpl_vars['jugador']->value->nombreEquipo;?>
 </td>
-                        <td><a href='verJugador/<?php echo $_smarty_tpl->tpl_vars['jugador']->value->id_jugador;?>
+                            <td><a href='verJugador/<?php echo $_smarty_tpl->tpl_vars['jugador']->value->id_jugador;?>
 '><button type="button" class="btn btn-info">Ver Detalle</button></a></td>
-                    </tr>
-                <?php
+                        </tr>
+                    <?php
 }
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+                </tbody>
             </table>
         </div>
     </div>

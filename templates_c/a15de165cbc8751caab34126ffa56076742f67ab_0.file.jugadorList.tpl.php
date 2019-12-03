@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-12-02 23:24:13
+/* Smarty version 3.1.33, created on 2019-12-03 13:00:08
   from '/opt/lampp/htdocs/copiaAPI/templates/jugadorList.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5de58f0dc58bf2_74944126',
+  'unifunc' => 'content_5de64e483c1fc1_07158298',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a15de165cbc8751caab34126ffa56076742f67ab' => 
     array (
       0 => '/opt/lampp/htdocs/copiaAPI/templates/jugadorList.tpl',
-      1 => 1575325450,
+      1 => 1575374405,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5de58f0dc58bf2_74944126 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5de64e483c1fc1_07158298 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:templates/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -84,7 +84,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
     <br>
 
-    <table class="table table-striped table-bordered text-white font-weight-bold">
+    <table class="table table-striped table-bordered font-weight-bold">
         <thead class="thead-dark">
             <tr>
                 <th class="text-center" scope="col">ID Jugador</th>
@@ -94,13 +94,13 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 <th class="text-center" scope="col">Opciones</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="bg-white">
             <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['jugadores']->value, 'jugador');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['jugador']->value) {
 ?>
-                <tr class="bg-secondary">
+                <tr>
                     <td class="text-center"><?php echo $_smarty_tpl->tpl_vars['jugador']->value->id_jugador;?>
 </td>
                     <td class="text-center"><?php echo $_smarty_tpl->tpl_vars['jugador']->value->nombreJugador;?>

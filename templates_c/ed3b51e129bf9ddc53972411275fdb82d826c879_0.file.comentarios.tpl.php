@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-12-02 23:37:39
+/* Smarty version 3.1.33, created on 2019-12-03 12:55:57
   from '/opt/lampp/htdocs/copiaAPI/templates/vue/comentarios.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5de59233367c70_66069252',
+  'unifunc' => 'content_5de64d4da9a850_61829989',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ed3b51e129bf9ddc53972411275fdb82d826c879' => 
     array (
       0 => '/opt/lampp/htdocs/copiaAPI/templates/vue/comentarios.tpl',
-      1 => 1575326256,
+      1 => 1575374146,
       2 => 'file',
     ),
   ),
@@ -20,11 +20,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5de59233367c70_66069252 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5de64d4da9a850_61829989 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <section id="seccionComentario">
 
-    <table class="table table-striped table-bordered text-white font-weight-bold">
+    <table class="table table-striped table-bordered font-weight-bold">
         <thead class="thead-dark">
             <tr>
                 <th class="col-3 text-center" scope="col">Comentario</th>
@@ -38,8 +38,8 @@ function content_5de59233367c70_66069252 (Smarty_Internal_Template $_smarty_tpl)
                 
             </tr>
         </thead>
-        <tbody>
-            <tr v-for="comentario in comentarios" class="bg-secondary">
+        <tbody class="bg-white">
+            <tr v-for="comentario in comentarios">
                 <td class="col-3 text-justify">{{comentario.comentario}}</td>
                 <td class="col-3 text-center">{{comentario.puntaje}}</td>
                 

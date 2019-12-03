@@ -56,7 +56,7 @@
 
         <div class="container">
             <h1 class="text-uppercase text-white font-weight-bold">lista de equipos</h1>
-            <table class="table table-striped table-bordered text-white font-weight-bold text-center">
+            <table class="table table-striped table-bordered font-weight-bold text-center">
                 <thead class="thead-dark"> 
                     <tr>
                         <th scope="col">ID Equipo</th>
@@ -66,15 +66,17 @@
                         <th scope="col">Opciones</th>
                     </tr>
                 </thead>
-                {foreach $equipos as $equipo}
-                    <tr class="bg-secondary">
-                        <td>{$equipo->id_equipo}</td>
-                        <td>{$equipo->nombre}</td>
-                        <td>{$equipo->pais}</td>
-                        <td>{$equipo->cantidad_titulos}</td>
-                        <td><a href='verEquipo/{$equipo->id_equipo}'><button type="button" class="btn btn-info">Ver Detalle</button></a></td>
-                    </tr>
-                {/foreach}
+                <tbody class="bg-white">
+                    {foreach $equipos as $equipo}
+                        <tr>
+                            <td>{$equipo->id_equipo}</td>
+                            <td>{$equipo->nombre}</td>
+                            <td>{$equipo->pais}</td>
+                            <td>{$equipo->cantidad_titulos}</td>
+                            <td><a href='verEquipo/{$equipo->id_equipo}'><button type="button" class="btn btn-info">Ver Detalle</button></a></td>
+                        </tr>
+                    {/foreach}
+                </tbody>
             </table>
         </div>
      
@@ -82,7 +84,7 @@
 
         <div class="container">
             <h1 class="text-uppercase text-white font-weight-bold">lista de jugadores</h1>
-            <table class="table table-striped table-bordered text-white font-weight-bold text-center">
+            <table class="table table-striped table-bordered font-weight-bold text-center">
                 <thead class="thead-dark">
                     <tr>
                         <th scope="col">ID Jugador</th>
@@ -92,15 +94,17 @@
                         <th scope="col">Opciones</th>
                     </tr>
                 </thead>
-                {foreach $jugadores as $jugador}
-                    <tr class="bg-secondary">
-                        <td>{$jugador->id_jugador}</td>
-                        <td>{$jugador->nombreJugador}</td>
-                        <td>{$jugador->posicion}</td>
-                        <td>{$jugador->nombreEquipo}</td>
-                        <td><a href='verJugador/{$jugador->id_jugador}'><button type="button" class="btn btn-info">Ver Detalle</button></a></td>
-                    </tr>
-                {/foreach}
+                <tbody class="bg-white">
+                    {foreach $jugadores as $jugador}
+                        <tr>
+                            <td>{$jugador->id_jugador}</td>
+                            <td>{$jugador->nombreJugador}</td>
+                            <td>{$jugador->posicion}</td>
+                            <td>{$jugador->nombreEquipo}</td>
+                            <td><a href='verJugador/{$jugador->id_jugador}'><button type="button" class="btn btn-info">Ver Detalle</button></a></td>
+                        </tr>
+                    {/foreach}
+                </tbody>
             </table>
         </div>
     </div>

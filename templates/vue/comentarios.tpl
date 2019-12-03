@@ -1,7 +1,7 @@
 {literal}
 <section id="seccionComentario">
 
-    <table class="table table-striped table-bordered text-white font-weight-bold">
+    <table class="table table-striped table-bordered font-weight-bold">
         <thead class="thead-dark">
             <tr>
                 <th class="col-3 text-center" scope="col">Comentario</th>
@@ -15,8 +15,8 @@
                 {literal}
             </tr>
         </thead>
-        <tbody>
-            <tr v-for="comentario in comentarios" class="bg-secondary">
+        <tbody class="bg-white">
+            <tr v-for="comentario in comentarios">
                 <td class="col-3 text-justify">{{comentario.comentario}}</td>
                 <td class="col-3 text-center">{{comentario.puntaje}}</td>
                 {/literal}

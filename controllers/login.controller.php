@@ -65,7 +65,6 @@ class LoginController {
     }
 
     public function eliminaUsuario($params= null) {
-
         $idUsuario = $params[":ID"];
         // barrera de administradores
         $this->authHelper->checkLoggedAdmin();
@@ -74,7 +73,6 @@ class LoginController {
     }
 
     public function editaUsuario($params= null) {
-
         $idUsuario = $params[":ID"];
         // barrera de administradores
         $this->authHelper->checkLoggedAdmin();

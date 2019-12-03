@@ -30,7 +30,7 @@
 
         <br>
 
-        <table class="table table-striped table-bordered text-white font-weight-bold">
+        <table class="table table-striped table-bordered font-weight-bold">
             <thead class="thead-dark">
                 <tr>
                     <th class="text-center" scope="col">ID Equipo</th>
@@ -40,9 +40,9 @@
                     <th class="text-center" scope="col">Opciones</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="bg-white">
                 {foreach $equipos as $equipo}
-                    <tr class="bg-secondary">
+                    <tr>
                         <td class="text-center">{$equipo->id_equipo}</td> 
                         <td class="text-center">{$equipo->nombre}</td> 
                         <td class="text-center">{$equipo->pais}</td> 

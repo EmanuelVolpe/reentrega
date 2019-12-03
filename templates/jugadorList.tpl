@@ -48,7 +48,7 @@
 
     <br>
 
-    <table class="table table-striped table-bordered text-white font-weight-bold">
+    <table class="table table-striped table-bordered font-weight-bold">
         <thead class="thead-dark">
             <tr>
                 <th class="text-center" scope="col">ID Jugador</th>
@@ -58,9 +58,9 @@
                 <th class="text-center" scope="col">Opciones</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="bg-white">
             {foreach $jugadores as $jugador}
-                <tr class="bg-secondary">
+                <tr>
                     <td class="text-center">{$jugador->id_jugador}</td>
                     <td class="text-center">{$jugador->nombreJugador}</td>
                     <td class="text-center">{$jugador->posicion}</td>
